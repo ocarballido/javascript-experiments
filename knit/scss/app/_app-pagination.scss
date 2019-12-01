@@ -1,0 +1,29 @@
+// ------ VARS ------
+
+// ------ IMPORTS ------
+// Required
+
+// Optional
+
+.pagination {
+	&.app-pagination {
+		.page-item {
+			.page-link {
+				@include transition();
+				border: none;
+				border-radius: 2px;
+				margin: 0 1px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {}
+
+@media (max-width: 575px) {}
+
+
+
+
+
+

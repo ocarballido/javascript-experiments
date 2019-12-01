@@ -1,0 +1,168 @@
+// ------ VARS ------
+
+// Optional
+
+input.form-control, select.form-control, textarea.form-control {
+	background-color: rgba(72, 72, 72, .1);
+	border: none;
+	border-radius: 4px;
+	padding: 0.54rem 0.75rem;
+	&::placeholder {
+		color: #000;
+		opacity: .3;
+	}
+	&:focus {
+		background-color: rgba(72, 72, 72, .1);
+	}
+}
+select.form-control {
+	height: 36px !important;
+}
+#modal-editProductDetail, #modal-pageSize, #modal-socialNetwork, #modal-selectImage {
+	.form-group {
+		label {
+			color: rgba(72, 72, 72, .6);
+			font-size: 0.85rem;
+			font-weight: 700;
+		}
+	}
+}
+
+// ----- CUSTOM RADIO AND CHECK -----
+.form-check {
+	margin-bottom: 10px;
+
+	// ------ RADIO ------
+	[type="radio"]:checked,
+	[type="radio"]:not(:checked) {
+		position: absolute;
+		left: -9999px;
+	}
+	[type="radio"]:checked + label,
+	[type="radio"]:not(:checked) + label
+	{
+		position: relative;
+		padding-left: 28px;
+		cursor: pointer;
+		line-height: 20px;
+		display: inline-block;
+		//font-size: 1.3rem;
+		//color: #666;
+	}
+	[type="radio"]:checked + label:before,
+	[type="radio"]:not(:checked) + label:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: -2px;
+		width: 22px;
+		height: 22px;
+		border: 2px solid $dark;
+		border-radius: 100%;
+		background: transparent;
+	}
+	[type="radio"]:checked + label:after,
+	[type="radio"]:not(:checked) + label:after {
+		content: '';
+		width: 14px;
+		height: 14px;
+		background: $dark;
+		position: absolute;
+		top: 2px;
+		left: 4px;
+		border-radius: 100%;
+		-webkit-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+	}
+	[type="radio"]:not(:checked) + label:after {
+		opacity: 0;
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	[type="radio"]:checked + label:after {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+
+	// ------ CHECK ------
+	input[type="checkbox"] {
+		opacity: 0;
+	}
+
+	input[type="checkbox"] + label {
+		color: rgba(72, 72, 72, .8);
+		display: inline-block;
+		font-weight: 500;
+		line-height: 1.8rem;
+		padding-left: 28px;
+		position: relative;
+		text-transform: uppercase;
+		span {
+			text-transform: capitalize !important;
+		}
+	}
+
+	input[type="checkbox"] + label::before,
+	input[type="checkbox"] + label::after {
+		position: absolute;
+		content: "";
+		display: inline-block;
+	}
+
+	/*Outer box of the fake checkbox*/
+	input[type="checkbox"] + label::before{
+		height: 22px;
+		width: 22px;
+		background-color: rgba(72, 72, 72, .1);
+		border-radius: 2px;
+		left: 0px;
+		top: 0px;
+		@include transition();
+	}
+
+	input[type="checkbox"]:checked + label::before {
+		background-color: $primary;
+		border: none;
+	}
+
+	input[type="checkbox"]:checked + label {
+		color: $primary;
+	}
+
+	/*Checkmark of the fake checkbox*/
+	input[type="checkbox"] + label::after {
+		height: 8px;
+		width: 14px;
+		border-left: 3px solid white;
+		border-bottom: 3px solid white;
+		transform: rotate(-45deg);
+		left: 4px;
+		top: 6px;
+	}
+
+	/*Hide the checkmark by default*/
+	input[type="checkbox"] + label::after {
+		content: none;
+	}
+
+	/*Unhide on the checked state*/
+	input[type="checkbox"]:checked + label::after {
+		content: "";
+	}
+
+	/*Adding focus styles on the outer-box of the fake checkbox*/
+	input[type="checkbox"]:focus + label::before {
+	    //outline: rgb(59, 153, 252) auto 5px;
+	}
+}
+
+@media (max-width: 767px) {}
+
+@media (max-width: 575px) {}
+
+
+
+
+
+

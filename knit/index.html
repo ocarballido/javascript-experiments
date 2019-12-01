@@ -1,0 +1,2061 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- FONT -->
+		<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+
+		<!-- MATERIAL ICONS -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<!-- APP CSS -->
+		<link rel="stylesheet" href="css/app-styles/app-style.css">
+
+		<!-- APP JS -->
+		<script src="js/jquery.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/app.js"></script>
+
+		<script type="text/JavaScript" src="js/jQuery.print.min.js"></script>
+
+		<title>Knitted canvas</title>
+
+	</head>
+
+	<body id="" class="">
+
+		<!-- MAIN -->
+		<main id="main" class="wrapper">
+
+			<div class="row no-gutters">
+				
+				<div id="sidebar" class="col-auto d-none d-md-block">
+
+					<!-- ROWS -->
+					<div class="py-2 mb-2">
+
+						<a href="http://oscarballido.com/"><img class="mb-3" src="images/oscarballido-logo.png" height="30"></a>
+						
+						<h6 class="text-uppercase text-muted">Rows</h6>
+
+						<button type="button" class="btn btn-secondary mb-1 py-2 deleteRow">Delete row</button>
+
+						<button type="button" class="btn btn-secondary mb-1 py-2 addRow">Add row</button>
+
+					</div>
+					<!-- /ROWS -->
+
+					<!-- COLUMS -->
+					<div class="py-2 mb-2">
+						
+						<h6 class="text-uppercase text-muted">Columns</h6>
+
+						<button type="button" class="btn btn-secondary mb-1 py-2 deleteColumn">Delete column</button>
+
+						<button type="button" class="btn btn-secondary mb-1 py-2 addColumn">Add column</button>
+
+					</div>
+					<!-- /COLUMS -->
+
+					<!-- BRUSHES -->
+					<div id="brushes" class="py-2 mb-2">
+						
+						<h6 class="text-uppercase text-muted">Select a brush</h6>
+
+						<div class="btn-group brush-dropdown dropright">
+
+							<button type="button" class="btn btn-secondary dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Knit</button>
+
+							<div class="dropdown-menu">
+
+								<a class="dropdown-item active" href="#">Knit</a>
+
+								<a class="dropdown-item" href="#">Pipes</a>
+
+								<a class="dropdown-item" href="#">Circle</a>
+
+								<a class="dropdown-item" href="#">Triangle</a>
+
+								<a class="dropdown-item" href="#">Arab</a>
+
+								<a class="dropdown-item" href="#">Fancy</a>
+
+							</div>
+
+						</div>
+
+						<!-- BRUSHES KNIT -->
+						<div class="brushes-container brushes-knit">
+							
+							<div class="btn-group btn-group-toggle btn-group-knit" data-toggle="buttons">
+								
+								<label class="btn btn-outline-dark active">
+
+									<input type="radio" name="options" id="option1" autocomplete="off" checked> <span class="knit-icon dot-knit_01"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option2" autocomplete="off"> <span class="knit-icon dot-knit_02"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-knit_03"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-knit_04"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-knit_05"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-knit_06"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-knit_07"></span>
+
+								</label>
+
+							</div>
+
+						</div>
+						<!-- /BRUSHES KNIT -->
+
+						<!-- BRUSHES PIPES -->
+						<div class="brushes-container brushes-pipes hide-element">
+							
+							<div class="btn-group btn-group-toggle btn-group-knit" data-toggle="buttons">
+								
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option1" autocomplete="off"> <span class="knit-icon dot-pipes-01"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option2" autocomplete="off"> <span class="knit-icon dot-pipes-02"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-03"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-04"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-05"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-06"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-07"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-08"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-09"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-10"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-11"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-12"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-13"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-14"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-15"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-16"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-17"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-18"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-19"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-20"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-21"></span>
+
+								</label>
+
+							</div>
+
+						</div>
+						<!-- /BRUSHES PIPES -->
+
+						<!-- BRUSHES CIRCLE -->
+						<div class="brushes-container brushes-circle hide-element">
+							
+							<div class="btn-group btn-group-toggle btn-group-knit" data-toggle="buttons">
+								
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-01"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-02"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-03"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-04"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-05"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-06"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-07"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-08"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-09"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-10"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-11"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-12"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-13"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-14"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-15"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-16"></span>
+
+								</label>
+
+							</div>
+
+						</div>
+						<!-- /BRUSHES CIRCLE -->
+
+						<!-- BRUSHES TRIANGLE -->
+						<div class="brushes-container brushes-triangle hide-element">
+							
+							<div class="btn-group btn-group-toggle btn-group-knit" data-toggle="buttons">
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-square-top-right"></span>
+
+								</label>
+
+							</div>
+
+						</div>
+						<!-- /BRUSHES TRIANGLE -->
+
+						<!-- BRUSHES ARAB -->
+						<div class="brushes-container brushes-arab hide-element">
+							
+							<div class="btn-group btn-group-toggle btn-group-knit" data-toggle="buttons">
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_01"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_02"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_03"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_04"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_05"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_06"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_07"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_08"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_09"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_10"></span>
+
+								</label>
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_11"></span>
+
+								</label>
+
+							</div>
+
+						</div>
+						<!-- /BRUSHES ARAB -->
+
+						<!-- BRUSHES FANCY -->
+						<div class="brushes-container brushes-fancy hide-element">
+							
+							<div class="btn-group btn-group-toggle btn-group-knit" data-toggle="buttons">
+
+								<label class="btn btn-outline-dark">
+
+									<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-stripes"></span>
+
+								</label>
+
+							</div>
+
+						</div>
+						<!-- /BRUSHES FANCY -->
+
+					</div>
+					<!-- /BRUSHES -->
+
+					<!-- TILES SIZE -->
+					<div class="py-2 mb-2">
+						
+						<h6 class="text-uppercase text-muted">Tiles size</h6>
+
+						<div class="btn-group btn-group-toggle btn-group-tiles" data-toggle="buttons">
+
+							<label class="btn btn-outline-dark" data-size="30">
+
+								<input type="radio" name="options" id="option2" autocomplete="off"> <span class="mt-2">30</span>
+
+							</label>
+
+							<label class="btn btn-outline-dark active" data-size="42">
+
+								<input type="radio" name="options" id="option2" autocomplete="off"> <span class="mt-2">42</span>
+
+							</label>
+
+							<label class="btn btn-outline-dark" data-size="54">
+
+								<input type="radio" name="options" id="option1" autocomplete="off" checked> <span class="mt-2">54</span>
+
+							</label>
+
+						</div>
+
+					</div>
+					<!-- /TILES SIZE -->
+
+					<!-- GUIDES -->
+					<div class="py-2 mb-2">
+						
+						<h6 class="text-uppercase text-muted">Guide lines</h6>
+
+						<div class="btn-group btn-group-toggle btn-group-border" data-toggle="buttons">
+
+							<label class="btn btn-outline-dark active show-border">
+
+								<input type="radio" name="options" id="option1" autocomplete="off" checked> <span class="mt-2"><i class="material-icons md-18">grid_on</i></span>
+
+							</label>
+
+							<label class="btn btn-outline-dark hide-border">
+
+								<input type="radio" name="options" id="option2" autocomplete="off"> <span class="mt-2"><i class="material-icons md-18">grid_off</i></span>
+
+							</label>
+
+						</div>
+
+					</div>
+					<!-- /GUIDES -->
+
+					<!-- RESTART -->
+					<div class="py-2 mb-2">
+						
+						<h6 class="text-uppercase text-muted">Restart canvas</h6>
+
+						<button type="button" class="btn btn-secondary mb-1 py-2 deleteBrushes">Delete</button>
+
+						<button type="button" class="btn btn-secondary mb-1 py-2 restartApp">Restar</button>
+
+					</div>
+					<!-- /RESTART -->
+
+					<!-- COLORS -->
+					<div class="py-2 mb-2">
+						
+						<h6 class="text-uppercase text-muted">Select color</h6>
+
+						<div class="btn-group btn-group-toggle btn-group-swatches" data-toggle="buttons">
+
+							<label class="btn btn-secondary active" data-color="000">
+
+								<input type="radio" name="options" id="option1" autocomplete="off" checked>
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="fff">
+
+								<input type="radio" name="options" id="option1" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="ffffa9">
+
+								<input type="radio" name="options" id="option1" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="feff71">
+
+								<input type="radio" name="options" id="option2" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="feff37">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="fdfd07">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="c5c501">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="8f8f00">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="535502">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="befeaa">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="97fe6e">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="68ff3b">
+
+								<input type="radio" name="options" id="option1" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="3ffe01">
+
+								<input type="radio" name="options" id="option2" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="2ec312">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="238f00">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="155600">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="aaffd5">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="70fdb8">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="39ff9d">
+
+								<input type="radio" name="options" id="option1" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="00ff7f">
+
+								<input type="radio" name="options" id="option2" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="00c762">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="008f44">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="07522b">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="a9eafc">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="70daff">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="39ccff">
+
+								<input type="radio" name="options" id="option1" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="01befe">
+
+								<input type="radio" name="options" id="option2" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="0195c3">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="016a8a">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="004154">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="aaaaff">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="6f72ff">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="383bfc">
+
+								<input type="radio" name="options" id="option1" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="0101f9">
+
+								<input type="radio" name="options" id="option2" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="0100c6">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="01008c">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="000056">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="e6acf9">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="da70f6">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="cc38fc">
+
+								<input type="radio" name="options" id="option1" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="c200fb">
+
+								<input type="radio" name="options" id="option2" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="9600c6">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="6c008e">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="3f0157">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="fdaad4">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="ff70b6">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="fe389a">
+
+								<input type="radio" name="options" id="option1" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="ff017e">
+
+								<input type="radio" name="options" id="option2" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="c5006a">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="8e0146">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="57002a">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="fdbeac">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="fd956e">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="ff6737">
+
+								<input type="radio" name="options" id="option1" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="ff4100">
+
+								<input type="radio" name="options" id="option2" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="c43400">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="912302">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+							<label class="btn btn-secondary" data-color="561503">
+
+								<input type="radio" name="options" id="option3" autocomplete="off">
+
+							</label>
+
+						</div>
+
+					</div>
+					<!-- /COLORS -->
+
+				</div>
+
+				<div id="content" class="col">
+
+					<button type="button" id="sidebarCollapse" class="btn btn-secondary d-none d-md-inline-block mb-3"><span class="show-menu-text hide-element">Show menu</span><span class="hide-menu-text">Hide menu</span></button>
+
+					<button id="mobileCollapse" class="btn btn-secondary d-sm-inline-block d-md-none mb-3 ml-3" type="button" data-toggle="collapse" data-target="#collapseSettings" aria-expanded="false" aria-controls="collapseSettings">Settings</button>
+
+					<button type="button" id="saveArt" class="btn btn-secondary mb-3">Save</button>
+
+					<button type="button" class="btn btn-secondary mb-3 paintCanvas" data-color="000">background<span class="bg-color"></span></button>
+
+					<button type="button" class="btn btn-secondary mb-3 paintBrushes" data-color="000">brushes<span class="bg-color"></span></button>
+
+					<div class="collapse collapseSettings d-md-none" id="collapseSettings">
+
+						<div class="p-4">
+
+							<!-- ROWS -->
+							<div class="py-2 mb-2">
+								
+								<h6 class="text-uppercase text-muted">Rows</h6>
+
+								<button type="button" class="btn btn-secondary mb-1 py-2 deleteRow">Delete row</button>
+
+								<button type="button" class="btn btn-secondary mb-1 py-2 addRow">Add row</button>
+
+							</div>
+							<!-- /ROWS -->
+
+							<!-- COLUMS -->
+							<div class="py-2 mb-2">
+								
+								<h6 class="text-uppercase text-muted">Columns</h6>
+
+								<button type="button" class="btn btn-secondary mb-1 py-2 deleteColumn">Delete column</button>
+
+								<button type="button" class="btn btn-secondary mb-1 py-2 addColumn">Add column</button>
+
+							</div>
+							<!-- /COLUMS -->
+
+							<!-- BRUSHES -->
+							<div id="brushes" class="py-2 mb-2">
+								
+								<h6 class="text-uppercase text-muted">Select a brush</h6>
+
+								<div class="btn-group brush-dropdown dropright">
+
+									<button type="button" class="btn btn-secondary dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Knit</button>
+
+									<div class="dropdown-menu">
+
+										<a class="dropdown-item active" href="#">Knit</a>
+
+										<a class="dropdown-item" href="#">Pipes</a>
+
+										<a class="dropdown-item" href="#">Circle</a>
+
+										<a class="dropdown-item" href="#">Triangle</a>
+
+										<a class="dropdown-item" href="#">Arab</a>
+
+										<a class="dropdown-item" href="#">Fancy</a>
+
+									</div>
+
+								</div>
+
+								<!-- BRUSHES KNIT -->
+								<div class="brushes-container brushes-knit">
+									
+									<div class="btn-group btn-group-toggle btn-group-knit" data-toggle="buttons">
+										
+										<label class="btn btn-outline-dark active">
+
+											<input type="radio" name="options" id="option1" autocomplete="off" checked> <span class="knit-icon dot-knit_01"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option2" autocomplete="off"> <span class="knit-icon dot-knit_02"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-knit_03"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-knit_04"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-knit_05"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-knit_06"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-knit_07"></span>
+
+										</label>
+
+									</div>
+
+								</div>
+								<!-- /BRUSHES KNIT -->
+
+								<!-- BRUSHES PIPES -->
+								<div class="brushes-container brushes-pipes hide-element">
+									
+									<div class="btn-group btn-group-toggle btn-group-knit" data-toggle="buttons">
+										
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option1" autocomplete="off"> <span class="knit-icon dot-pipes-01"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option2" autocomplete="off"> <span class="knit-icon dot-pipes-02"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-03"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-04"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-05"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-06"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-07"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-08"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-09"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-10"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-11"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-12"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-13"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-14"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-15"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-16"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-17"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-18"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-19"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-20"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-pipes-21"></span>
+
+										</label>
+
+									</div>
+
+								</div>
+								<!-- /BRUSHES PIPES -->
+
+								<!-- BRUSHES CIRCLE -->
+								<div class="brushes-container brushes-circle hide-element">
+									
+									<div class="btn-group btn-group-toggle btn-group-knit" data-toggle="buttons">
+										
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-01"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-02"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-03"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-04"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-05"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-06"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-07"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-08"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-09"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-10"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-11"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-12"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-13"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-14"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-15"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-circle-16"></span>
+
+										</label>
+
+									</div>
+
+								</div>
+								<!-- /BRUSHES CIRCLE -->
+
+								<!-- BRUSHES TRIANGLE -->
+								<div class="brushes-container brushes-triangle hide-element">
+									
+									<div class="btn-group btn-group-toggle btn-group-knit" data-toggle="buttons">
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-square-top-right"></span>
+
+										</label>
+
+									</div>
+
+								</div>
+								<!-- /BRUSHES TRIANGLE -->
+
+								<!-- BRUSHES ARAB -->
+								<div class="brushes-container brushes-arab hide-element">
+									
+									<div class="btn-group btn-group-toggle btn-group-knit" data-toggle="buttons">
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_01"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_02"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_03"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_04"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_05"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_06"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_07"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_08"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_09"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_10"></span>
+
+										</label>
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-arab_11"></span>
+
+										</label>
+
+									</div>
+
+								</div>
+								<!-- /BRUSHES ARAB -->
+
+								<!-- BRUSHES FANCY -->
+								<div class="brushes-container brushes-fancy hide-element">
+									
+									<div class="btn-group btn-group-toggle btn-group-knit" data-toggle="buttons">
+
+										<label class="btn btn-outline-dark">
+
+											<input type="radio" name="options" id="option3" autocomplete="off"> <span class="knit-icon dot-stripes"></span>
+
+										</label>
+
+									</div>
+
+								</div>
+								<!-- /BRUSHES FANCY -->
+
+							</div>
+							<!-- /BRUSHES -->
+
+							<!-- TILES SIZE -->
+							<div class="py-2 mb-2">
+								
+								<h6 class="text-uppercase text-muted">Tiles size</h6>
+
+								<div class="btn-group btn-group-toggle btn-group-tiles" data-toggle="buttons">
+
+									<label class="btn btn-outline-dark" data-size="30">
+
+										<input type="radio" name="options" id="option2" autocomplete="off"> <span class="mt-2">30</span>
+
+									</label>
+
+									<label class="btn btn-outline-dark active" data-size="42">
+
+										<input type="radio" name="options" id="option2" autocomplete="off"> <span class="mt-2">42</span>
+
+									</label>
+
+									<label class="btn btn-outline-dark" data-size="54">
+
+										<input type="radio" name="options" id="option1" autocomplete="off" checked> <span class="mt-2">54</span>
+
+									</label>
+
+								</div>
+
+							</div>
+							<!-- /TILES SIZE -->
+
+							<!-- GUIDES -->
+							<div class="py-2 mb-2">
+								
+								<h6 class="text-uppercase text-muted">Guide lines</h6>
+
+								<div class="btn-group btn-group-toggle btn-group-border" data-toggle="buttons">
+
+									<label class="btn btn-outline-dark active show-border">
+
+										<input type="radio" name="options" id="option1" autocomplete="off" checked> <span class="mt-2"><i class="material-icons md-18">grid_on</i></span>
+
+									</label>
+
+									<label class="btn btn-outline-dark hide-border">
+
+										<input type="radio" name="options" id="option2" autocomplete="off"> <span class="mt-2"><i class="material-icons md-18">grid_off</i></span>
+
+									</label>
+
+								</div>
+
+							</div>
+							<!-- /GUIDES -->
+
+							<!-- RESTART -->
+							<div class="py-2 mb-2">
+								
+								<h6 class="text-uppercase text-muted">Restart canvas</h6>
+
+								<button type="button" class="btn btn-secondary mb-1 py-2 deleteBrushes">Delete</button>
+
+								<button type="button" class="btn btn-secondary mb-1 py-2 restartApp">Restar</button>
+
+							</div>
+							<!-- /RESTART -->
+
+							<!-- COLORS -->
+							<div class="py-2 mb-2">
+								
+								<h6 class="text-uppercase text-muted">Select color</h6>
+
+								<div class="btn-group btn-group-toggle btn-group-swatches" data-toggle="buttons">
+
+									<label class="btn btn-secondary active" data-color="000">
+
+										<input type="radio" name="options" id="option1" autocomplete="off" checked>
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="fff">
+
+										<input type="radio" name="options" id="option1" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="ffffa9">
+
+										<input type="radio" name="options" id="option1" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="feff71">
+
+										<input type="radio" name="options" id="option2" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="feff37">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="fdfd07">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="c5c501">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="8f8f00">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="535502">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="befeaa">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="97fe6e">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="68ff3b">
+
+										<input type="radio" name="options" id="option1" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="3ffe01">
+
+										<input type="radio" name="options" id="option2" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="2ec312">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="238f00">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="155600">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="aaffd5">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="70fdb8">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="39ff9d">
+
+										<input type="radio" name="options" id="option1" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="00ff7f">
+
+										<input type="radio" name="options" id="option2" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="00c762">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="008f44">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="07522b">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="a9eafc">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="70daff">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="39ccff">
+
+										<input type="radio" name="options" id="option1" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="01befe">
+
+										<input type="radio" name="options" id="option2" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="0195c3">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="016a8a">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="004154">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="aaaaff">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="6f72ff">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="383bfc">
+
+										<input type="radio" name="options" id="option1" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="0101f9">
+
+										<input type="radio" name="options" id="option2" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="0100c6">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="01008c">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="000056">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="e6acf9">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="da70f6">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="cc38fc">
+
+										<input type="radio" name="options" id="option1" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="c200fb">
+
+										<input type="radio" name="options" id="option2" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="9600c6">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="6c008e">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="3f0157">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="fdaad4">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="ff70b6">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="fe389a">
+
+										<input type="radio" name="options" id="option1" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="ff017e">
+
+										<input type="radio" name="options" id="option2" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="c5006a">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="8e0146">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="57002a">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="fdbeac">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="fd956e">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="ff6737">
+
+										<input type="radio" name="options" id="option1" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="ff4100">
+
+										<input type="radio" name="options" id="option2" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="c43400">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="912302">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+									<label class="btn btn-secondary" data-color="561503">
+
+										<input type="radio" name="options" id="option3" autocomplete="off">
+
+									</label>
+
+								</div>
+
+								<button type="button" class="btn btn-secondary mb-1 py-2 paintCanvas">Paint canvas background</button>
+
+							</div>
+							<!-- /COLORS -->
+
+						</div>
+
+					</div>
+
+					<div class="square-container d-flex">
+
+						<ul id="printContainer" class="list-unstyled m-0">
+						
+							<li class="row square-row m-0">
+								
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+							</li>
+
+							<li class="row square-row m-0">
+								
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+							</li>
+
+							<li class="row square-row m-0">
+								
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+							</li>
+
+							<li class="row square-row m-0">
+								
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+							</li>
+
+							<li class="row square-row m-0">
+								
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+							</li>
+
+							<li class="row square-row m-0">
+								
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+							</li>
+
+							<li class="row square-row m-0">
+								
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+							</li>
+
+							<li class="row square-row m-0">
+								
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+							</li>
+
+							<li class="row square-row m-0">
+								
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+							</li>
+
+							<li class="row square-row m-0">
+								
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+							</li>
+
+							<li class="row square-row m-0">
+								
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+							</li>
+
+							<li class="row square-row m-0 d-none">
+								
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+								<a class="square borderer d-flex justify-content-center align-items-center" data-size="42"><span class="knit-icon" data-paint="000"></span></a>
+
+							</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</main>
+		<!-- /MAIN -->
+
+	</body>
+
+</html>
