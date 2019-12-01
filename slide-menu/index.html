@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Menu</title>
+		<!-- BOOTSTRAP CSS -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+
+		<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+
+		<!-- MY CSS -->
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- MATERIAL DESIGN ICONS -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<!-- JQUERY -->
+		<script src="js/jquery-1.11.0.min.js"></script>
+
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+
+				var docHeight = $( window ).height();
+
+				console.log(docHeight);
+
+				var numItems = $(".slap").length;
+
+				var slapWidth = $(".slap-menu").width();
+
+				var itemWidthPercent = 100 / numItems;
+
+				var itemWidth = (itemWidthPercent * slapWidth) / 100;
+
+
+				$(".slap-content").css({
+
+					"height"		: docHeight - 36 + "px"
+
+				});
+
+				for(var i = 0; i < numItems; i ++) {
+
+					$(".slap-menu .slap:eq(" + i + ")").attr("id", "slap-" + i + "").css("z-index", numItems - i);
+
+					$(".slap-menu .slap:eq(" + i + ") .slap-tab").css({
+
+						"margin-left"	:(itemWidthPercent * i) + "%",
+
+						"width"			:itemWidthPercent + "%"
+
+					});
+
+				}
+
+				$("body").on("click", function() {
+
+					if(event.pageY > docHeight - 36 || event.pageY < 36) {
+
+						if(event.pageX > 0 && event.pageX < itemWidth) {
+							//---- Slap 1
+							var isActive= $(this).find("#slap-0").hasClass("active");
+
+							if(!isActive) {
+
+								$(".slap").animate({
+
+									"top"	: "0px"
+
+								}).removeClass("inactive-up");
+
+								$(".slap").not("#slap-0").addClass("inactive-down").removeClass("active");
+
+								$("#slap-0").addClass("active");
+
+							}
+
+						}else if(event.pageX > itemWidth && event.pageX < itemWidth * 2) {
+							//---- Slap 2
+							var isActive= $(this).find("#slap-1").hasClass("active");
+							var isInactiveUp= $(this).find("#slap-1").hasClass("inactive-up");
+							var isInactiveDown= $(this).find("#slap-1").hasClass("inactive-down");
+
+							if(!isActive && isInactiveDown) {
+
+								$("#slap-0").animate({
+
+									"top"	: - docHeight + 36 + "px"
+
+								}).removeClass("active inactive-down").addClass("inactive-up");
+
+								$("#slap-1").addClass("active");
+
+							}else if(!isActive && isInactiveUp) {
+
+								$("#slap-1, #slap-2, #slap-3, #slap-4").animate({
+
+									"top"	: "0"
+
+								}).removeClass("active inactive-up");
+
+								$("#slap-1").addClass("active");
+
+								$("#slap-2, #slap-3, #slap-4").addClass("inactive-down");
+
+							}
+
+							console.log("2");
+
+						}else if(event.pageX > itemWidth * 2 && event.pageX < itemWidth * 3) {
+							//---- Slap 3
+							var isActive= $(this).find("#slap-2").hasClass("active");
+							var isInactiveUp= $(this).find("#slap-2").hasClass("inactive-up");
+							var isInactiveDown= $(this).find("#slap-2").hasClass("inactive-down");
+
+							if(!isActive && isInactiveDown) {
+
+								$("#slap-0, #slap-1").animate({
+
+									"top"	: - docHeight + 36 + "px"
+
+								}).removeClass("active inactive-down").addClass("inactive-up");
+
+								$("#slap-2").addClass("active");
+
+							}else if(!isActive && isInactiveUp) {
+
+								$("#slap-2, #slap-3, #slap-4").animate({
+
+									"top"	: "0"
+
+								}).removeClass("active inactive-up");
+
+								$("#slap-2").addClass("active");
+
+								$("#slap-3, #slap-4").addClass("inactive-down");
+
+							}
+
+							console.log("3");
+
+						}else if(event.pageX > itemWidth * 3 && event.pageX < itemWidth * 4) {
+							//---- Slap 4
+							var isActive= $(this).find("#slap-3").hasClass("active");
+							var isInactiveUp= $(this).find("#slap-3").hasClass("inactive-up");
+							var isInactiveDown= $(this).find("#slap-3").hasClass("inactive-down");
+
+							if(!isActive && isInactiveDown) {
+
+								$("#slap-0, #slap-1, #slap-2").animate({
+
+									"top"	: - docHeight + 36 + "px"
+
+								}).removeClass("active inactive-down").addClass("inactive-up");
+
+								$("#slap-3").addClass("active");
+
+							}else if(!isActive && isInactiveUp) {
+
+								$("#slap-3, #slap-4").animate({
+
+									"top"	: "0"
+
+								}).removeClass("active inactive-up");
+
+								$("#slap-3").addClass("active");
+
+								$("#slap-4").addClass("inactive-down");
+
+							}
+
+							console.log("4");
+
+						}else if(event.pageX > itemWidth * 4 && event.pageX < itemWidth * 5) {
+							//---- Slap 5
+							var isActive= $(this).find("#slap-4").hasClass("active");
+							var isInactiveUp= $(this).find("#slap-4").hasClass("inactive-up");
+							var isInactiveDown= $(this).find("#slap-4").hasClass("inactive-down");
+
+							if(!isActive && isInactiveDown) {
+
+								$("#slap-0, #slap-1, #slap-2, #slap-3").animate({
+
+									"top"	: - docHeight + 36 + "px"
+
+								}).removeClass("active inactive-down").addClass("inactive-up");
+
+								$("#slap-4").addClass("active");
+
+							}
+
+							console.log("5");
+
+						}
+
+					}
+
+				});
+
+			});
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class="slap-menu">
+			
+			<!-- Slap 01 -->
+			<div class="slap active">
+				
+				<div class="slap-content">
+
+					<h1>Lorem ipsum</h1>
+					
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+					<h2>Dolor sit amet</h2>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				</div>
+
+				<div class="slap-tab">Item 01</div>
+
+			</div>
+			<!-- /Slap 01 -->
+
+			<!-- Slap 02 -->
+			<div class="slap inactive-down">
+				
+				<div class="slap-content">
+					
+					<h1>Lorem ipsum</h1>
+					
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+					<h2>Dolor sit amet</h2>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				</div>
+
+				<div class="slap-tab">Item 02</div>
+
+			</div>
+			<!-- /Slap 02 -->
+
+			<!-- Slap 03 -->
+			<div class="slap inactive-down">
+				
+				<div class="slap-content">
+					
+					<h1>Lorem ipsum</h1>
+					
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+					<h2>Dolor sit amet</h2>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				</div>
+
+				<div class="slap-tab">Item 03</div>
+
+			</div>
+			<!-- /Slap 03 -->
+
+			<!-- Slap 04 -->
+			<div class="slap inactive-down">
+				
+				<div class="slap-content">
+					
+					<h1>Lorem ipsum</h1>
+					
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				</div>
+
+				<div class="slap-tab">Item 04</div>
+
+			</div>
+			<!-- /Slap 04 -->
+
+			<!-- Slap 05 -->
+			<div class="slap inactive-down">
+				
+				<div class="slap-content">
+					
+					<h1>Lorem ipsum</h1>
+					
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					
+				</div>
+
+				<div class="slap-tab">Item 05</div>
+
+			</div>
+			<!-- /Slap 05 -->
+
+		</div>
+		
+	</body>
+
+</html>

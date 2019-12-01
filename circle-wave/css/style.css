@@ -1,0 +1,115 @@
+/* ------ */
+body {
+	background-color: #1d1d1d;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+p {
+	background-color: #fff;
+	display: inline-block;
+	font-weight: bold;
+	margin: 0;
+	padding: 6px 12px;
+}
+
+.cuadros {
+	/*background-color: greenyellow;*/
+	border-radius: 50%;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+	float: left;
+	height: 10px;
+	margin-left: 60px;
+	margin-top: 60px;
+	position: absolute;
+	width: 10px;
+}
+
+.color-crimson {
+	background-color: crimson;
+}
+.color-greenyellow {
+	background-color: greenyellow;
+}
+
+.clickDrag {
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	line-height: 14px;
+	text-transform: uppercase;
+	position: absolute;
+	text-align: center;
+	top: 15px;
+	width: 100%;
+	z-index: 999999;
+}
+
+.cuadro-container {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+}
+
+.cuadro {
+	background-color: #fff;
+	height: 30px;
+	width: 30px;
+}
+
+.cuadro1 {
+	background-color: #ff0000;
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+.cuadro2 {
+	background-color: #00ff00;
+	left: 40px;
+	position: absolute;
+	top: 0;
+}
+.cuadro3 {
+	background-color: #0000ff;
+	left: 80px;
+	position: absolute;
+	top: 0;
+}
+.cuadro4 {
+	background-color: #ffaa00;
+	left: 0;
+	position: absolute;
+	top: 40px;
+}
+.cuadro5 {
+	background-color: #00ffaa;
+	left: 40px;
+	position: absolute;
+	top: 40px;
+}
+.cuadro6 {
+	background-color: #aa00ff;
+	left: 80px;
+	position: absolute;
+	top: 40px;
+}
+.cuadro7 {
+	background-color: #aa00bb;
+	left: 0;
+	position: absolute;
+	top: 80px;
+}
+.cuadro8 {
+	background-color: #bbaa00;
+	left: 40px;
+	position: absolute;
+	top: 80px;
+}
+.cuadro9 {
+	background-color: #00bbaa;
+	left: 80px;
+	position: absolute;
+	top: 80px;
+}
+.cuadro1:hover, .cuadro2:hover, .cuadro3:hover, .cuadro4:hover, .cuadro5:hover, .cuadro6:hover, .cuadro7:hover, .cuadro8:hover, .cuadro9:hover {
+	z-index: 5;
+}

@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Wave</title>
+
+		<!-- ROBOTO -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+		<!-- BOOTSTRAP CSS -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+
+		<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+
+		<!-- MY CSS -->
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- JQUERY -->
+		<script src="js/jquery-1.11.0.min.js"></script>
+
+		<!-- EASING -->
+		<script src="js/easing.js"></script>
+
+		<!-- BOOTSTRAP JS -->
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- RESIZABLA PLUGIN -->
+		<script src="js/jquery-ui.min.js"></script>
+
+		<style type="text/css">
+			
+		.divideme p {
+			
+			/*position: absolute;
+
+			display: block;*/
+		}
+
+		</style>
+
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+
+				// Ancho del cuadrado
+				var cuadroSide = 10;
+
+				// Margin entre cuadrados
+				var margin = 60;
+
+				// Margin mas ancho
+				var marginAndSide = cuadroSide + margin;
+
+				// Ancho del window
+				var windowWidth = $(window).width();
+
+				// Alto del window
+				var windowHeight = $(window).height();
+
+				//Cantidad de cuadros en Width
+				var cuadrosOnWidth = Math.floor(windowWidth / marginAndSide);
+
+				//Cantidad de cuadros en Height
+				var cuadrosOnHeight = Math.floor(windowHeight / marginAndSide);
+
+				// Random color
+				var hue;
+
+				var container = $(".cuadros-container");
+
+				container.css("overflow", "hidden");
+
+			  	var cuadro;
+
+			  	for (var i = 0; i < cuadrosOnHeight; i++) {
+
+			  		for (var j = 0; j < cuadrosOnWidth; j++) {
+
+			  			hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+
+			  			var cuadro = $("<div class='cuadros'></div>");
+
+			  			cuadro.css({
+
+			  				"left" : (j * 70) + "px",
+			  				"top" : (i * 70) + "px"
+
+						});
+
+						container.append(cuadro);						
+
+			  		}
+
+
+			  	}
+
+			  	var cuadros = $(".cuadros");
+			  	var cuadroSide = cuadroSide / 2;
+
+				cuadros.each(function() {
+
+					var offset = $(this).offset();
+
+					$(this).data({x: offset.left + cuadroSide, y: offset.top + cuadroSide});
+
+				});
+
+				$(document).on("mousemove", function(event) {
+
+					var mx = event.pageX;
+					var my = event.pageY;
+
+					cuadros.each(function() {
+
+						var cuadrox = $(this).data("x");
+
+						var cuadroy = $(this).data("y");
+
+						var distancia = Math.sqrt(Math.pow((mx - cuadrox), 2) + Math.pow((my - cuadroy), 2));
+						var scale = Math.max(12 - distancia / 25, 1);
+						var zindex = Math.round(10000 / distancia);
+
+						$(this).css({
+
+							"transform": 	"scale3d(" + scale + "," + scale + ", 1)",
+							//"background": (scale > 6 && scale <= 12) ? "crimson" : "greenyellow",
+							"filter" : "hue-rotate(" + distancia * 2 + "deg)",
+							"z-index" : zindex
+
+						});
+
+					});
+
+				});
+
+				console.log(windowWidth, windowHeight, cuadrosOnWidth, cuadrosOnHeight, windowWidth / marginAndSide);
+				
+			});
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class="cuadros-container"></div>
+
+	</body>
+</html>

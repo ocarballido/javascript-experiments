@@ -1,0 +1,66 @@
+/* ------ */
+html {
+	height: 100%;
+}
+
+body {
+	background-color: #1d1d1d;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+h1, h2, h3 {
+	font-weight: 100;
+}
+
+.slap {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.slap .slap-content {
+	overflow-y: scroll;
+	padding: 30px;
+	width: 100%;
+}
+.slap .slap-tab {
+	box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+	color: #fff;
+	display: inline-block;
+	letter-spacing: 2px;
+	padding: 8px 10px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.slap#slap-0 .slap-content, .slap#slap-0 .slap-tab {
+	color: #fff;
+	background-color: #E20455;
+}
+
+.slap#slap-1 .slap-content, .slap#slap-1 .slap-tab {
+	color: #fff;
+	background-color: #1296A8;
+}
+
+.slap#slap-2 .slap-content, .slap#slap-2 .slap-tab {
+	color: #fff;
+	background-color: #CCDE00;
+}
+
+.slap#slap-3 .slap-content, .slap#slap-3 .slap-tab {
+	color: #fff;
+	background-color: #E88101;
+}
+
+.slap#slap-4 .slap-content, .slap#slap-4 .slap-tab {
+	color: #fff;
+	background-color: #F23E0B;
+}
+
+
+
+

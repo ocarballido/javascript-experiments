@@ -1,0 +1,49 @@
+/* ------ */
+body {
+	align-items: center;
+	background-color: #ffd03a;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+}
+
+.minion-container {
+	background-color: #ffd03a;
+	background-image: url("../img/minion-BG.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	padding-top: 56.25%;
+	position: relative;
+	width: 100%;
+}
+
+.circle-limit {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+29,e8e8e8+92 */
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #ffffff 30%, #e8e8e8 70%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #ffffff 30%,#e8e8e8 70%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #ffffff 30%,#e8e8e8 70%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	border-radius: 50%;
+	height: 12.2%;
+	left: 56%;
+	overflow: hidden;
+	position: absolute;
+	top: 43%;
+	width: 6.8%;
+}
+
+.circle {
+	background-image: url("../img/minion-pupile.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	border-radius: 50%;
+	height: 105%;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 105%;
+}
