@@ -2,7 +2,7 @@ $(document).ready(function() {
     var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
     var docHeight = $( document ).height();
     var docWidth = $( document ).width();
-    $("body").append("<div class='absoluteContainer'><p class='divideme'>DIVIDEME</p></div>");
+    $("body .app-container").append("<div class='absoluteContainer'><p class='divideme'>DIVIDEME</p></div>");
     $(".absoluteContainer").css("background-color", hue);
     $("body").on("mouseup", ".absoluteContainer", function() {
         var thisW = $(this).width();
