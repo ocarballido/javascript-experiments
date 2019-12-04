@@ -30,178 +30,21 @@
 		<!-- RESIZABLA PLUGIN -->
 		<script src="js/jquery-ui.min.js"></script>
 
-		<style type="text/css">
-			
-		.divideme p {
-			
-			/*position: absolute;
-
-			display: block;*/
-		}
-
-		</style>
-
-		<script type="text/javascript">
-
-			$(document).ready(function() {
-
-				// Ancho del cuadrado
-				var cuadroSide = 10;
-
-				// Margin entre cuadrados
-				var margin = 60;
-
-				// Margin mas ancho
-				var marginAndSide = cuadroSide + margin;
-
-				// Ancho del window
-				var windowWidth = $(window).width();
-
-				// Alto del window
-				var windowHeight = $(window).height();
-
-				//Cantidad de cuadros en Width
-				var cuadrosOnWidth = Math.floor(windowWidth / marginAndSide);
-
-				//Cantidad de cuadros en Height
-				var cuadrosOnHeight = Math.floor(windowHeight / marginAndSide);
-
-				// Color verde
-				var greenyellow = "greenyellow";
-
-				// Color rojo
-				var crimson = "crimson";
-
-				// Random color
-				var hue;
-
-				var container = $(".cuadros-container");
-
-				container.css("overflow", "hidden");
-
-			  	var cuadro;
-
-			  	for (var i = 0; i < cuadrosOnHeight; i++) {
-
-			  		for (var j = 0; j < cuadrosOnWidth; j++) {
-
-			  			hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
-
-			  			var cuadro = $("<div class='cuadros color-greenyellow'></div>");
-
-			  			cuadro.css({
-
-			  				"left" : (j * (cuadroSide + margin)) + "px",
-			  				"top" : (i * (cuadroSide + margin)) + "px"
-
-						});
-
-						container.append(cuadro);						
-
-			  		}
-
-
-			  	}
-
-			  	var cuadros = $(".cuadros");
-			  	var cuadroSide = cuadroSide / 2;
-
-				cuadros.each(function() {
-
-					var offset = $(this).offset();
-
-					$(this).data({x: offset.left + cuadroSide, y: offset.top + cuadroSide});
-
-				});
-
-				$(document).on("mousemove", function(event) {
-
-					var mx = event.pageX;
-					var my = event.pageY;
-
-					cuadros.each(function() {
-
-						var cuadrox = $(this).data("x");
-						var cuadroy = $(this).data("y");
-						var distancia = Math.sqrt(Math.pow((mx - cuadrox), 2) + Math.pow((my - cuadroy), 2));
-						var scale = Math.max(12 - distancia / 25, 1);
-						var zindex = Math.round(10000 / distancia);
-						var hasClassCrimson = $(this).hasClass("color-crimson");
-						var hasClassgreenyellow = $(this).hasClass("color-greenyellow");
-
-						$(this).css({
-
-							"transform": 	"scale3d(" + scale + "," + scale + ", 1)",
-							//"background": (scale > 6 && scale <= 12) ? "crimson" : "greenyellow",
-							//"filter" : "hue-rotate(" + distancia * 2 + "deg)",
-							"z-index" : zindex,
-							//"background": (scale > 7 && scale <= 12 && !hasClass) ? "crimson" : "greenyellow",
-
-						});
-
-						if(scale <= 12 && scale > 7) {
-
-							if(hasClassgreenyellow) {
-
-								$(this).css({
-
-									"background-color": "crimson"
-
-								});
-
-							}else {
-
-								$(this).css({
-
-									"background-color": "greenyellow"
-
-								});
-
-							}
-
-						}else {
-
-							if(hasClassCrimson) {
-
-								$(this).css({
-
-									"background-color": "crimson"
-
-								});
-
-							}else {
-
-								$(this).css({
-
-									"background-color": "greenyellow"
-
-								});
-
-							}
-
-						}
-
-					});
-
-				}).click(function() {
-
-					$(".cuadros").toggleClass("color-crimson color-greenyellow");
-
-				});
-
-				console.log(windowWidth, windowHeight, cuadrosOnWidth, cuadrosOnHeight, windowWidth / marginAndSide);
-				
-			});
-
-		</script>
+		<!-- App script -->
+		<script src="js/app.js"></script>
+
+		<!-- Place this tag in your head or just before your close body tag. -->
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
 
 	</head>
 
 	<body>
-
-		<span class="clickDrag">Clik, then move</span>
-
+		<div class="share-container">
+			<a href="http://oscarballido.com/" class="btn btn-default btn-xs text-lowercase pull-right">oscarballido.com</a>
+			<span class="clickDrag pull-right">Clik, then move</span>
+			<a class="github-button" href="https://github.com/ocarballido/javascript-experiments/tree/master/knit" data-icon="octicon-star" aria-label="Star javascript-experiments/knit on GitHub">Star</a>
+			<a class="github-button" href="https://github.com/ocarballido/javascript-experiments/tree/master/knit/fork" data-icon="octicon-repo-forked" aria-label="Fork javascript-experiments/knit on GitHub">Fork</a>
+		</div>
 		<div class="cuadros-container"></div>
-
 	</body>
 </html>
