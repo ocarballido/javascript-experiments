@@ -22,140 +22,52 @@
 		<!-- JQUERY -->
 		<script src="js/jquery-1.11.0.min.js"></script>
 
-		<!-- EASING -->
-		<script src="js/easing.js"></script>
-
 		<!-- BOOTSTRAP JS -->
 		<script src="js/bootstrap.min.js"></script>
 
-		<!-- RESIZABLA PLUGIN -->
-		<script src="js/jquery-ui.min.js"></script>
+		<!-- App js -->
+		<script src="js/app.js"></script>
 
-		<style type="text/css">
-			
-		.divideme p {
-			
-			/*position: absolute;
-
-			display: block;*/
-		}
-
-		</style>
-
-		<script type="text/javascript">
-
-			$(document).ready(function() {
-
-				var items = $(".cuadro");
-				var modelNumber = items.length;
-				var iconCheck = $(".check");
-				var iconLock = $(".lock");
-
-				items.each(function () {
-					addEvent($(this));
-				});
-
-				function addEvent (item) {
-
-					item.on("click", function () {
-
-						console.log("CLICK");
-
-						$(this).toggleClass("active");
-
-						$(this).find(iconCheck).toggleClass("hide");
-
-						var actives = items.filter(".active");
-
-						if (actives.length > 2) {
-
-							items
-							.not(actives)
-							.removeClass("active")
-							.addClass("disabled")
-							.off("click");
-
-							items.not(actives).find(iconLock).removeClass("hide");
-
-						} else {
-
-							addEvent( items.filter(".disabled").removeClass("disabled") );
-
-							items.find(iconLock).addClass("hide");
-
-						}
-
-					});
-
-				}
-
-			});
-
-		</script>
+		<!-- Place this tag in your head or just before your close body tag. -->
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
 
 	</head>
 
 	<body>
-
-		<div class="container">
-
-			<h1 class="text-center">No more than 3 selection</h1>
-
-			<h2 class="text-center">Click to select</h2>
-			
-			<div class="row">
-			
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					
-					<div class="cuadro panel active"><i class="material-icons check">done</i><i class="material-icons lock hide">lock</i></div>
-
-				</div>
-
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					
-					<div class="cuadro panel"><i class="material-icons check hide">done</i><i class="material-icons lock hide">lock</i></div>
-					
-				</div>
-
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					
-					<div class="cuadro panel"><i class="material-icons check hide">done</i><i class="material-icons lock hide">lock</i></div>
-
-				</div>
-
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					
-					<div class="cuadro panel"><i class="material-icons check hide">done</i><i class="material-icons lock hide">lock</i></div>
-					
-				</div>
-
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					
-					<div class="cuadro panel"><i class="material-icons check hide">done</i><i class="material-icons lock hide">lock</i></div>
-
-				</div>
-
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					
-					<div class="cuadro panel"><i class="material-icons check hide">done</i><i class="material-icons lock hide">lock</i></div>
-					
-				</div>
-
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					
-					<div class="cuadro panel"><i class="material-icons check hide">done</i><i class="material-icons lock hide">lock</i></div>
-
-				</div>
-
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					
-					<div class="cuadro panel"><i class="material-icons check hide">done</i><i class="material-icons lock hide">lock</i></div>
-					
-				</div>
-
-			</div>
-
+		<div class="share-container">
+			<a href="http://oscarballido.com/" class="btn btn-default btn-xs text-lowercase pull-right">oscarballido.com</a>
+			<a class="github-button" href="https://github.com/ocarballido/javascript-experiments/tree/master/toggle-cards" data-icon="octicon-star" aria-label="Star javascript-experiments/toggle-cards on GitHub">Star</a>
+			<a class="github-button" href="https://github.com/ocarballido/javascript-experiments/tree/master/toggle-cards/fork" data-icon="octicon-repo-forked" aria-label="Fork javascript-experiments/toggle-cards on GitHub">Fork</a>
 		</div>
-
+		<div class="container">
+			<h1 class="text-center">No more than 3 selection</h1>
+			<h2 class="text-center">Click to select</h2>
+			<div class="row">
+				<div class="col-xs-6 col-sm-4 col-md-3">
+					<div class="cuadro panel active"><i class="material-icons check">done</i><i class="material-icons lock hide">lock</i></div>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3">
+					<div class="cuadro panel"><i class="material-icons check hide">done</i><i class="material-icons lock hide">lock</i></div>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3">
+					<div class="cuadro panel"><i class="material-icons check hide">done</i><i class="material-icons lock hide">lock</i></div>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3">
+					<div class="cuadro panel"><i class="material-icons check hide">done</i><i class="material-icons lock hide">lock</i></div>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3">
+					<div class="cuadro panel"><i class="material-icons check hide">done</i><i class="material-icons lock hide">lock</i></div>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3">
+					<div class="cuadro panel"><i class="material-icons check hide">done</i><i class="material-icons lock hide">lock</i></div>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3">
+					<div class="cuadro panel"><i class="material-icons check hide">done</i><i class="material-icons lock hide">lock</i></div>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3">
+					<div class="cuadro panel"><i class="material-icons check hide">done</i><i class="material-icons lock hide">lock</i></div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
