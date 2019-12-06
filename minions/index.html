@@ -20,214 +20,24 @@
 		<!-- JQUERY -->
 		<script src="js/jquery-1.11.0.min.js"></script>
 
-		<script type="text/javascript">
-			
-			$(document).ready(function() {
-
-				var diameterBig 		= $(".circle-limit").width()
-					nintyPercent		= (diameterBig * 90) / 100
-					fivePercent			= (diameterBig * 5) / 100
-					diameterSmall 		= $(".circle").width()
-					circleBigOffset		= $(".circle-limit").offset()
-					circleBigPosX		= circleBigOffset.left
-					circleBigPosY		= circleBigOffset.top
-					docWidth			= $(document).width()
-					docHeight			= $(document).height();
-
-				$(document).on("mousemove", function(event) {
-
-					var mx 			= event.pageX;
-					var my 			= event.pageY;
-					var distancia 	= Math.sqrt(Math.pow((mx - (circleBigPosX + nintyPercent / 2)), 2) + Math.pow((my - (circleBigPosY + nintyPercent / 2)), 2));
-					var distanceDif = distancia - nintyPercent / 2;
-
-					if(mx > circleBigPosX + nintyPercent) {
-
-						var difPosX = Math.abs(((mx - (circleBigPosX + nintyPercent / 2)) * distanceDif) / distancia);
-
-						$(".circle").css("left", mx - circleBigPosX - difPosX + fivePercent + "px");
-
-					}else if(mx < circleBigPosX) {
-
-						var difPosX = Math.abs(((mx - (circleBigPosX + nintyPercent / 2)) * distanceDif) / distancia);
-
-						$(".circle").css("left", mx - circleBigPosX + difPosX + fivePercent + "px");
-
-					}else if(mx > circleBigPosX && mx < circleBigPosX + nintyPercent) {
-
-						if(distancia > nintyPercent / 2 && mx > (circleBigPosX + nintyPercent / 2)) {
-
-							var difPosX = Math.abs(((mx - (circleBigPosX + nintyPercent / 2)) * distanceDif) / distancia);
-
-							$(".circle").css("left", mx - circleBigPosX - difPosX + fivePercent + "px");
-
-						}else if(distancia > nintyPercent / 2 && mx < (circleBigPosX + nintyPercent / 2)) {
-
-							var difPosX = Math.abs(((mx - (circleBigPosX + nintyPercent / 2)) * distanceDif) / distancia);
-
-							$(".circle").css("left", mx -circleBigPosX + difPosX + fivePercent + "px");
-
-						}else {
-
-							$(".circle").css("left", mx - circleBigPosX + fivePercent + "px");
-
-						}
-
-					}
-
-					if(my > circleBigPosY + nintyPercent) {
-
-						var difPosY = Math.abs(((my - (circleBigPosY + nintyPercent / 2)) * distanceDif) / distancia);
-
-						$(".circle").css("top", my - circleBigPosY - difPosY + fivePercent + "px");
-
-					}else if(my < circleBigPosY) {
-
-						var difPosY = Math.abs(((my - (circleBigPosY + nintyPercent / 2)) * distanceDif) / distancia);
-
-						$(".circle").css("top", my - circleBigPosY + difPosY + fivePercent + "px");
-
-					}else if(my > circleBigPosY && my < circleBigPosY + nintyPercent) {
-
-						if(distancia > nintyPercent / 2 && my > (circleBigPosY + nintyPercent / 2)) {
-
-							var difPosY = Math.abs(((my - (circleBigPosY + nintyPercent / 2)) * distanceDif) / distancia);
-
-							$(".circle").css("top", my - circleBigPosY - difPosY + fivePercent + "px");
-
-						}else if(distancia > nintyPercent / 2 && my < (circleBigPosY + nintyPercent / 2)) {
-
-							var difPosY = Math.abs(((my - (circleBigPosY + nintyPercent / 2)) * distanceDif) / distancia);
-
-							$(".circle").css("top", my - circleBigPosY + difPosY + fivePercent + "px");
-
-						}else {
-
-							$(".circle").css("top", my - circleBigPosY + fivePercent + "px");
-
-						}
-
-					}
-
-				});
-
-				$(window).resize(function() {
-
-					var diameterBig 		= $(".circle-limit").width()
-						nintyPercent		= (diameterBig * 90) / 100
-						fivePercent			= (diameterBig * 5) / 100
-						diameterSmall 		= $(".circle").width()
-						circleBigOffset		= $(".circle-limit").offset()
-						circleBigPosX		= circleBigOffset.left
-						circleBigPosY		= circleBigOffset.top
-						docWidth			= $(document).width()
-						docHeight			= $(document).height();
-
-					$(".circle").css({
-
-						"left": 		"50%",
-
-						"top": 			"50%",
-
-						"transform": 	"translate(-50%, -50%)"
-					});
-
-					$(document).on("mousemove", function(event) {
-
-						var mx 			= event.pageX;
-						var my 			= event.pageY;
-						var distancia 	= Math.sqrt(Math.pow((mx - (circleBigPosX + nintyPercent / 2)), 2) + Math.pow((my - (circleBigPosY + nintyPercent / 2)), 2));
-						var distanceDif = distancia - nintyPercent / 2;
-
-						if(mx > circleBigPosX + nintyPercent) {
-
-							var difPosX = Math.abs(((mx - (circleBigPosX + nintyPercent / 2)) * distanceDif) / distancia);
-
-							$(".circle").css("left", mx - circleBigPosX - difPosX + fivePercent + "px");
-
-						}else if(mx < circleBigPosX) {
-
-							var difPosX = Math.abs(((mx - (circleBigPosX + nintyPercent / 2)) * distanceDif) / distancia);
-
-							$(".circle").css("left", mx - circleBigPosX + difPosX + fivePercent + "px");
-
-						}else if(mx > circleBigPosX && mx < circleBigPosX + nintyPercent) {
-
-							if(distancia > nintyPercent / 2 && mx > (circleBigPosX + nintyPercent / 2)) {
-
-								var difPosX = Math.abs(((mx - (circleBigPosX + nintyPercent / 2)) * distanceDif) / distancia);
-
-								$(".circle").css("left", mx - circleBigPosX - difPosX + fivePercent + "px");
-
-							}else if(distancia > nintyPercent / 2 && mx < (circleBigPosX + nintyPercent / 2)) {
-
-								var difPosX = Math.abs(((mx - (circleBigPosX + nintyPercent / 2)) * distanceDif) / distancia);
-
-								$(".circle").css("left", mx -circleBigPosX + difPosX + fivePercent + "px");
-
-							}else {
-
-								$(".circle").css("left", mx - circleBigPosX + fivePercent + "px");
-
-							}
-
-						}
-
-						if(my > circleBigPosY + nintyPercent) {
-
-							var difPosY = Math.abs(((my - (circleBigPosY + nintyPercent / 2)) * distanceDif) / distancia);
-
-							$(".circle").css("top", my - circleBigPosY - difPosY + fivePercent + "px");
-
-						}else if(my < circleBigPosY) {
-
-							var difPosY = Math.abs(((my - (circleBigPosY + nintyPercent / 2)) * distanceDif) / distancia);
-
-							$(".circle").css("top", my - circleBigPosY + difPosY + fivePercent + "px");
-
-						}else if(my > circleBigPosY && my < circleBigPosY + nintyPercent) {
-
-							if(distancia > nintyPercent / 2 && my > (circleBigPosY + nintyPercent / 2)) {
-
-								var difPosY = Math.abs(((my - (circleBigPosY + nintyPercent / 2)) * distanceDif) / distancia);
-
-								$(".circle").css("top", my - circleBigPosY - difPosY + fivePercent + "px");
-
-							}else if(distancia > nintyPercent / 2 && my < (circleBigPosY + nintyPercent / 2)) {
-
-								var difPosY = Math.abs(((my - (circleBigPosY + nintyPercent / 2)) * distanceDif) / distancia);
-
-								$(".circle").css("top", my - circleBigPosY + difPosY + fivePercent + "px");
-
-							}else {
-
-								$(".circle").css("top", my - circleBigPosY + fivePercent + "px");
-
-							}
-
-						}
-
-					});
-					
-				});
-
-			});
-
-		</script>
+		<!-- App js -->
+		<script src="js/app.js"></script>
+
+		<!-- Place this tag in your head or just before your close body tag. -->
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
 
 	</head>
 
-	<body id="workout-new" class="">
-
-		<div class="minion-container">
-			
-			<div class="circle-limit">
-				
-				<div class="circle"></div>
-
-			</div>
-
+	<body id="" class="">
+		<div class="share-container">
+			<a href="http://oscarballido.com/" class="btn btn-default btn-xs text-lowercase pull-right">oscarballido.com</a>
+			<a class="github-button" href="https://github.com/ocarballido/javascript-experiments/tree/master/minions" data-icon="octicon-star" aria-label="Star javascript-experiments/minions on GitHub">Star</a>
+			<a class="github-button" href="https://github.com/ocarballido/javascript-experiments/tree/master/minions/fork" data-icon="octicon-repo-forked" aria-label="Fork javascript-experiments/minions on GitHub">Fork</a>
 		</div>
-
+		<div class="minion-container">
+			<div class="circle-limit">
+				<div class="circle"></div>
+			</div>
+		</div>
 	</body>
 </html>
