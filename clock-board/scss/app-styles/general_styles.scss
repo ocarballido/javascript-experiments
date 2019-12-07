@@ -1,0 +1,198 @@
+// ------ VARS ------
+@import "app-variables";
+
+// ------ IMPORTS ------
+// Required
+@import "../bootstrap/bootstrap";
+
+//OS
+@import "app-buttons";
+@import "app-font";
+@import "app-type";
+
+// ------ BASICS ------
+html {
+	overflow-x: hidden;
+	height: 100%;
+}
+body {
+	//overflow-x: hidden;
+	background-image: url('../images/body/body-bg.png');
+	background-position: top left;
+	background-repeat: repeat;
+	background-size: 10px 10px;
+}
+
+main {
+	overflow-x: hidden;
+}
+
+.divider {
+	.divider-dot {
+		background-color: $white;
+		border-radius: 50%;
+		box-shadow: 0px 0px 15px rgba(255, 245, 0, .75);
+		display: block;
+		height: 3px;
+		margin: 4px 0;
+		width: 3px;
+	}
+}
+
+.hours, .minutes, .seconds, .tenth, .thousandths {
+	display: inline-block;
+	margin: 0 3px;
+}
+
+.number {
+	display: inline-block;
+	margin: 0 5px;
+	.digit-row {
+		margin-bottom: 4px;
+		height: 3px;
+		.row-led {
+			background-color: #272727;
+			border-radius: 50%;
+			box-shadow: none;
+			display: inline-block;
+			height: 3px;
+			margin-right: 0px;
+			width: 3px;
+			&.on {
+				background-color: $white;
+				box-shadow: 0px 0px 15px rgba(255, 245, 0, .75);
+			}
+		}
+	}
+}
+
+.hours {
+	.number {
+		.digit-row {
+			.row-led {
+				transition: all .75s;
+			}
+		}
+	}
+}
+.minutes {
+	.number {
+		.digit-row {
+			.row-led {
+				transition: all .75s;
+			}
+		}
+	}
+}
+.seconds {
+	.number {
+		.digit-row {
+			.row-led {
+				transition: all .75s;
+			}
+		}
+	}
+}
+.tenth {
+	.number {
+		.digit-row {
+			.row-led {
+				//transition: all 0s;
+			}
+		}
+	}
+}
+.hundredths {
+	.number {
+		.digit-row {
+			.row-led {
+				transition: all .01s;
+			}
+		}
+	}
+}
+
+.share-container {
+	background-color: #202020;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+	left: 0;
+	padding: 10px 10px 6px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 5;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+	.divider {
+		.divider-dot {
+			height: 5px;
+			margin: 2px 0;
+			width: 5px;
+		}
+	}
+	.hours, .minutes, .seconds, .tenth, .thousandths {
+		margin: 0 5px;
+	}
+	.number {
+		.digit-row {
+			height: 5px;
+			.row-led {
+				height: 5px;
+				width: 5px;
+			}
+		}
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	.divider {
+		.divider-dot {
+			height: 10px;
+			margin: 4px 0;
+			width: 10px;
+		}
+	}
+	.hours, .minutes, .seconds, .tenth, .thousandths {
+		margin: 0 10px;
+	}
+	.number {
+		.digit-row {
+			height: 10px;
+			.row-led {
+				height: 10px;
+				width: 10px;
+			}
+		}
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.divider {
+		.divider-dot {
+			height: 15px;
+			margin: 4px 0;
+			width: 15px;
+		}
+	}
+	.hours, .minutes, .seconds, .tenth, .thousandths {
+		margin: 0 10px;
+	}
+	.number {
+		.digit-row {
+			height: 15px;
+			.row-led {
+				height: 15px;
+				width: 15px;
+			}
+		}
+	}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+

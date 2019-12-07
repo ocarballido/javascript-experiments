@@ -1,0 +1,90 @@
+// Imports
+@import "../bkool-variables";
+
+// Bootstrap styles
+// Required
+@import "../../bootstrap/functions";
+@import "../../bootstrap/variables";
+@import "../../bootstrap/mixins";
+
+@import "../../bootstrap/forms";
+@import "../../bootstrap/input-group";
+
+// Bkool styles
+@import "../bkool-forms";
+@import "../bkool-input-group";
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+}
+
+.login-register {
+	.container-fluid, .container {
+		height: 100%;
+		.row {
+			height: 100%;
+		}
+	}
+	.card {
+		max-width: 500px;
+		width: 100%;
+	}
+}
+
+.bkool-login {
+	.login-left {
+		/*background-image: url("../../images/public-web/experience-shapes/velodrome-shape-white.svg");
+		background-position: left center;
+		background-repeat: no-repeat;
+		background-size: auto 150%;*/
+	}
+	.login-right {
+		background-image: url("../../images/login-register/login-register-02.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.login-left {}
+}
+
+.bkool-register {
+	.register-right {
+		background-image: url("../../images/login-register/login-register-01.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.register-left {
+		/*background-image: url("../../images/public-web/experience-shapes/velodrome-shape-white.svg");
+		background-position: left center;
+		background-repeat: no-repeat;
+		background-size: auto 150%;*/
+	}
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+

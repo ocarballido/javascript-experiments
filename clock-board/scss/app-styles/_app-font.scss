@@ -1,0 +1,86 @@
+// OS FONT
+/*@font-face {
+  font-display: swap;
+	font-family: "HKGothic-Bold";
+  src:url('../fonts/HKGothic/HKGothic-Bold.eot');
+  src:url('../fonts/HKGothic/HKGothic-Bold.otf') format('embedded-opentype'),
+      url('../fonts/HKGothic/HKGothic-Bold.woff') format('woff'),
+      url("../fonts/HKGothic/HKGothic-Bold.ttf") format("ttf");
+	text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+	font-family: "HKGothic-Medium";
+  src:url('../fonts/HKGothic/HKGothic-Medium.eot');
+  src:url('../fonts/HKGothic/HKGothic-Medium.otf') format('embedded-opentype'),
+      url('../fonts/HKGothic/HKGothic-Medium.woff') format('woff'),
+      url("../fonts/HKGothic/HKGothic-Medium.ttf") format("ttf");
+	text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+	font-family: "HKGothic-SemiBold";
+  src:url('../fonts/HKGothic/HKGothic-SemiBold.eot');
+  src:url('../fonts/HKGothic/HKGothic-SemiBold.otf') format('embedded-opentype'),
+      url('../fonts/HKGothic/HKGothic-SemiBold.woff') format('woff'),
+      url("../fonts/HKGothic/HKGothic-SemiBold.ttf") format("ttf");
+	text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+	font-family: "HKGrotesk-Bold";
+  src:url('../fonts/HKGrotesk/HKGrotesk-Bold.eot');
+  src:url('../fonts/HKGrotesk/HKGrotesk-Bold.otf') format('embedded-opentype'),
+      url('../fonts/HKGrotesk/HKGrotesk-Bold.woff') format('woff'),
+      url("../fonts/HKGrotesk/HKGrotesk-Bold.ttf") format("ttf");
+	text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+	font-family: "HKGrotesk-Medium";
+  src:url('../fonts/HKGrotesk/HKGrotesk-Medium.eot');
+  src:url('../fonts/HKGrotesk/HKGrotesk-Medium.otf') format('embedded-opentype'),
+      url('../fonts/HKGrotesk/HKGrotesk-Medium.woff') format('woff'),
+      url("../fonts/HKGrotesk/HKGrotesk-Medium.ttf") format("ttf");
+	text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+	font-family: "HKGrotesk-Regular";
+  src:url('../fonts/HKGrotesk/HKGrotesk-Regular.eot');
+  src:url('../fonts/HKGrotesk/HKGrotesk-Regular.otf') format('embedded-opentype'),
+      url('../fonts/HKGrotesk/HKGrotesk-Regular.woff') format('woff'),
+      url("../fonts/HKGrotesk/HKGrotesk-Regular.ttf") format("ttf");
+	text-rendering: optimizeLegibility;
+}*/
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;  /* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	vertical-align: middle;
+
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+}
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }

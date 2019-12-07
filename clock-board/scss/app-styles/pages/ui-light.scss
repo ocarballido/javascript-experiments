@@ -1,0 +1,133 @@
+// ------ PRIVATE GENERAL STYLES ------
+@import "../os-variables";
+
+// ------ IMPORTS BOOTSTRAP ------
+// Required
+@import "../../bootstrap/bootstrap";
+
+// Optional
+
+//os
+@import "../os-alert";
+@import "../os-badge";
+@import "../os-breadcrumb";
+@import "../os-buttons";
+@import "../os-card";
+@import "../os-custom-forms";
+@import "../os-dropdown";
+@import "../os-font";
+@import "../os-footer";
+@import "../os-forms";
+@import "../os-input-group";
+@import "../os-list-group";
+@import "../os-modal";
+@import "../os-nav";
+@import "../os-navbar";
+@import "../os-pagination";
+@import "../os-popover";
+@import "../os-tables";
+@import "../os-tooltip";
+@import "../os-type";
+@import "../os-utilities";
+@import "../owl-carrousel";
+
+#index-welcome {
+	&:after {
+		background-color: $dark;
+		background-image: url("../images/ui/home/texture.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		content: '';
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+	}
+}
+
+#public-home-section-welcome {
+	overflow: hidden;
+	.container, .row {
+		height: 100%;
+	}
+}
+
+#myVideo {
+	background-image: url("../../images/public-web/home/video-BG.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	bottom: 0;
+	min-height: 100%;
+	min-width: 100%; 
+	opacity: .8;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -100;
+}
+
+.ui-sidebar-menu {
+	/*width: 25%;
+	min-width: 250px;
+	max-width: 300px;*/
+	width: 250px;
+}
+#ui-sidebar {
+	@include transition();
+	margin-left: 0;
+	&.sidebar-hidden {
+		margin-left: -250px;
+	}
+	&.sidebar-show {
+		margin-left: 0;
+	}
+}
+.card-icons {
+	transition: all .25s;
+	&:hover {
+		cursor: pointer;
+		transform: scale(1.1)
+	}
+}
+.text-gothic {
+	font-family: "HKGothic-Medium";
+}
+.text-grotesk {
+	font-family: "HKGrotesk-Medium";
+}
+.footer {
+	box-shadow: 0 50vh 0 50vh $primary;
+}
+code {
+	color: #03A9F4;
+}
+.html-text {
+	color: $dark;
+}
+.open-close-code {
+	color: #828282;
+}
+
+@media (max-width: 767px) {
+	.sectio-01-data-title {
+		font-size: 5rem;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
