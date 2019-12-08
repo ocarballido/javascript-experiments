@@ -30,8 +30,10 @@ main {
 .divider {
 	.divider-dot {
 		background-color: $white;
+		border: 1px solid rgba(0, 0, 0, .6);
 		border-radius: 50%;
-		box-shadow: 0px 0px 15px rgba(255, 245, 0, .75);
+		box-shadow: 0px 0px 17px rgba(255, 255, 0, .90);
+		z-index: 10;
 		display: block;
 		height: 3px;
 		margin: 4px 0;
@@ -60,7 +62,9 @@ main {
 			width: 3px;
 			&.on {
 				background-color: $white;
-				box-shadow: 0px 0px 15px rgba(255, 245, 0, .75);
+				border: 1px solid rgba(0, 0, 0, .6);
+				box-shadow: 0px 0px 17px rgba(255, 255, 0, .90);
+				z-index: 10;
 			}
 		}
 	}
