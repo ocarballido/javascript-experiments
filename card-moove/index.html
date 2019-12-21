@@ -1,0 +1,656 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<title>Oscar Carballido | CV</title>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Favico -->
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+
+		<!-- Roboto -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700&display=swap" rel="stylesheet">
+
+		<!-- Material icons -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<!-- App CSS -->
+		<link rel="stylesheet" href="css/general_styles.css">
+
+		<!-- Place this tag in your head or just before your close body tag. -->
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+	</head>
+
+	<body id="home" class="bg-dark p-5 h-100 d-flex justify-content-center align-items-center">
+		<div class="share-container">
+			<a href="http://oscarballido.com/" class="btn btn-white btn-sm py-0 float-right">oscarballido.com</a>
+			<a class="github-button" href="https://github.com/ocarballido/javascript-experiments/tree/master/clock-board" data-icon="octicon-star" aria-label="Star javascript-experiments/clock-board on GitHub">Star</a>
+			<a class="github-button" href="https://github.com/ocarballido/javascript-experiments/tree/master/clock-board/fork" data-icon="octicon-repo-forked" aria-label="Fork javascript-experiments/clock-board on GitHub">Fork</a>
+		</div>
+		<div class="container">
+			<!--<h3 class="test text-white"></h3>-->
+			<div class="row justify-content-center mb-4 text-center">
+				<div class="btn-group btn-group-toggle" data-toggle="buttons">
+					<label class="btn btn-primary active">
+						<input type="checkbox" name="options" id="hours" checked> Horas
+					</label>
+					<label class="btn btn-primary active">
+						<input type="checkbox" name="options" id="minutes" checked> Minutos
+					</label>
+					<label class="btn btn-primary active">
+						<input type="checkbox" name="options" id="seconds" checked> Segundos
+					</label>
+					<label class="btn btn-primary">
+						<input type="checkbox" name="options" id="tenth"> Décimas
+					</label>
+				</div>
+			</div>
+
+			<div class="row justify-content-center">
+				<!-- Hours -->
+				<div class="hours">
+					<!-- Number -->
+					<div class="number">
+						<ul class="list-unstyled m-0">
+							<!-- Number row -->
+							<li class="digit-row digit-row-1">
+								<span class="row-led led-3 led-5 led-7"></span>
+								<span class="row-led led-0 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-2 led-3 led-4 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-3 led-5 led-7"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-2">
+								<span class="row-led led-0 led-2 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-1"></span>
+								<span class="row-led led-1 led-4"></span>
+								<span class="row-led led-4"></span>
+								<span class="row-led led-0 led-2 led-3 led-6 led-7 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-3">
+								<span class="row-led led-0 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-4 led-5"></span>
+								<span class="row-led led-1 led-5"></span>
+								<span class="row-led led-3 led-4 led-5 led-7"></span>
+								<span class="row-led led-0 led-2 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-4">
+								<span class="row-led led-0 led-4 led-6"></span>
+								<span class="row-led led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-3 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-2 led-3 led-4 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-5 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-5">
+								<span class="row-led led-0 led-4 led-6 led-8"></span>
+								<span class="row-led led-4 led-7"></span>
+								<span class="row-led led-1 led-2 led-4"></span>
+								<span class="row-led led-0 led-4"></span>
+								<span class="row-led led-0 led-3 led-4 led-5 led-6 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-6">
+								<span class="row-led led-0 led-3 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-2 led-7"></span>
+								<span class="row-led led-1"></span>
+								<span class="row-led led-4"></span>
+								<span class="row-led led-0 led-3 led-5 led-6 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-7">
+								<span class="row-led led-2"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-4 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-2"></span>
+							</li>
+							<!-- /Number row -->
+						</ul>
+					</div>
+					<!-- /Number -->
+	
+					<!-- Number -->
+					<div class="number">
+						<ul class="list-unstyled m-0">
+							<!-- Number row -->
+							<li class="digit-row digit-row-1">
+								<span class="row-led led-3 led-5 led-7"></span>
+								<span class="row-led led-0 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-2 led-3 led-4 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-3 led-5 led-7"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-2">
+								<span class="row-led led-0 led-2 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-1"></span>
+								<span class="row-led led-1 led-4"></span>
+								<span class="row-led led-4"></span>
+								<span class="row-led led-0 led-2 led-3 led-6 led-7 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-3">
+								<span class="row-led led-0 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-4 led-5"></span>
+								<span class="row-led led-1 led-5"></span>
+								<span class="row-led led-3 led-4 led-5 led-7"></span>
+								<span class="row-led led-0 led-2 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-4">
+								<span class="row-led led-0 led-4 led-6"></span>
+								<span class="row-led led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-3 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-2 led-3 led-4 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-5 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-5">
+								<span class="row-led led-0 led-4 led-6 led-8"></span>
+								<span class="row-led led-4 led-7"></span>
+								<span class="row-led led-1 led-2 led-4"></span>
+								<span class="row-led led-0 led-4"></span>
+								<span class="row-led led-0 led-3 led-4 led-5 led-6 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-6">
+								<span class="row-led led-0 led-3 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-2 led-7"></span>
+								<span class="row-led led-1"></span>
+								<span class="row-led led-4"></span>
+								<span class="row-led led-0 led-3 led-5 led-6 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-7">
+								<span class="row-led led-2"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-4 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-2"></span>
+							</li>
+							<!-- /Number row -->
+						</ul>
+					</div>
+					<!-- /Number -->
+				</div>
+				<!-- /Hours -->
+	
+				<!-- Dividers -->
+				<div class="divider divider-minutes mx-2 d-flex align-items-center">
+					<ul class="list-unstyled m-0">
+						<!-- Divider dot -->
+						<li class="divider-dot"></li>
+						<!-- /Divider dot -->
+	
+						<!-- Divider dot -->
+						<li class="divider-dot"></li>
+						<!-- /Divider dot -->
+					</ul>
+				</div>
+				<!-- /Dividers -->
+	
+				<!-- Minutes -->
+				<div class="minutes">
+					<!-- Number -->
+					<div class="number">
+						<ul class="list-unstyled m-0">
+							<!-- Number row -->
+							<li class="digit-row digit-row-1">
+								<span class="row-led led-3 led-5 led-7"></span>
+								<span class="row-led led-0 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-2 led-3 led-4 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-3 led-5 led-7"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-2">
+								<span class="row-led led-0 led-2 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-1"></span>
+								<span class="row-led led-1 led-4"></span>
+								<span class="row-led led-4"></span>
+								<span class="row-led led-0 led-2 led-3 led-6 led-7 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-3">
+								<span class="row-led led-0 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-4 led-5"></span>
+								<span class="row-led led-1 led-5"></span>
+								<span class="row-led led-3 led-4 led-5 led-7"></span>
+								<span class="row-led led-0 led-2 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-4">
+								<span class="row-led led-0 led-4 led-6"></span>
+								<span class="row-led led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-3 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-2 led-3 led-4 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-5 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-5">
+								<span class="row-led led-0 led-4 led-6 led-8"></span>
+								<span class="row-led led-4 led-7"></span>
+								<span class="row-led led-1 led-2 led-4"></span>
+								<span class="row-led led-0 led-4"></span>
+								<span class="row-led led-0 led-3 led-4 led-5 led-6 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-6">
+								<span class="row-led led-0 led-3 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-2 led-7"></span>
+								<span class="row-led led-1"></span>
+								<span class="row-led led-4"></span>
+								<span class="row-led led-0 led-3 led-5 led-6 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-7">
+								<span class="row-led led-2"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-4 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-2"></span>
+							</li>
+							<!-- /Number row -->
+						</ul>
+					</div>
+					<!-- /Number -->
+	
+					<!-- Number -->
+					<div class="number">
+						<ul class="list-unstyled m-0">
+							<!-- Number row -->
+							<li class="digit-row digit-row-1">
+								<span class="row-led led-3 led-5 led-7"></span>
+								<span class="row-led led-0 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-2 led-3 led-4 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-3 led-5 led-7"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-2">
+								<span class="row-led led-0 led-2 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-1"></span>
+								<span class="row-led led-1 led-4"></span>
+								<span class="row-led led-4"></span>
+								<span class="row-led led-0 led-2 led-3 led-6 led-7 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-3">
+								<span class="row-led led-0 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-4 led-5"></span>
+								<span class="row-led led-1 led-5"></span>
+								<span class="row-led led-3 led-4 led-5 led-7"></span>
+								<span class="row-led led-0 led-2 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-4">
+								<span class="row-led led-0 led-4 led-6"></span>
+								<span class="row-led led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-3 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-2 led-3 led-4 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-5 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-5">
+								<span class="row-led led-0 led-4 led-6 led-8"></span>
+								<span class="row-led led-4 led-7"></span>
+								<span class="row-led led-1 led-2 led-4"></span>
+								<span class="row-led led-0 led-4"></span>
+								<span class="row-led led-0 led-3 led-4 led-5 led-6 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-6">
+								<span class="row-led led-0 led-3 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-2 led-7"></span>
+								<span class="row-led led-1"></span>
+								<span class="row-led led-4"></span>
+								<span class="row-led led-0 led-3 led-5 led-6 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-7">
+								<span class="row-led led-2"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-4 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-2"></span>
+							</li>
+							<!-- /Number row -->
+						</ul>
+					</div>
+					<!-- /Number -->
+				</div>
+				<!-- /Minutes -->
+	
+				<!-- Dividers -->
+				<div class="divider divider-seconds mx-2 d-flex align-items-center">
+					<ul class="list-unstyled m-0">
+						<!-- Divider dot -->
+						<li class="divider-dot"></li>
+						<!-- /Divider dot -->
+	
+						<!-- Divider dot -->
+						<li class="divider-dot"></li>
+						<!-- /Divider dot -->
+					</ul>
+				</div>
+				<!-- /Dividers -->
+	
+				<!-- Seconds -->
+				<div class="seconds">
+					<!-- Number -->
+					<div class="number">
+						<ul class="list-unstyled m-0">
+							<!-- Number row -->
+							<li class="digit-row digit-row-1">
+								<span class="row-led led-3 led-5 led-7"></span>
+								<span class="row-led led-0 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-2 led-3 led-4 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-3 led-5 led-7"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-2">
+								<span class="row-led led-0 led-2 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-1"></span>
+								<span class="row-led led-1 led-4"></span>
+								<span class="row-led led-4"></span>
+								<span class="row-led led-0 led-2 led-3 led-6 led-7 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-3">
+								<span class="row-led led-0 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-4 led-5"></span>
+								<span class="row-led led-1 led-5"></span>
+								<span class="row-led led-3 led-4 led-5 led-7"></span>
+								<span class="row-led led-0 led-2 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-4">
+								<span class="row-led led-0 led-4 led-6"></span>
+								<span class="row-led led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-3 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-2 led-3 led-4 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-5 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-5">
+								<span class="row-led led-0 led-4 led-6 led-8"></span>
+								<span class="row-led led-4 led-7"></span>
+								<span class="row-led led-1 led-2 led-4"></span>
+								<span class="row-led led-0 led-4"></span>
+								<span class="row-led led-0 led-3 led-4 led-5 led-6 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-6">
+								<span class="row-led led-0 led-3 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-2 led-7"></span>
+								<span class="row-led led-1"></span>
+								<span class="row-led led-4"></span>
+								<span class="row-led led-0 led-3 led-5 led-6 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-7">
+								<span class="row-led led-2"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-4 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-2"></span>
+							</li>
+							<!-- /Number row -->
+						</ul>
+					</div>
+					<!-- /Number -->
+	
+					<!-- Number -->
+					<div class="number">
+						<ul class="list-unstyled m-0">
+							<!-- Number row -->
+							<li class="digit-row digit-row-1">
+								<span class="row-led led-3 led-5 led-7"></span>
+								<span class="row-led led-0 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-2 led-3 led-4 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-3 led-5 led-7"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-2">
+								<span class="row-led led-0 led-2 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-1"></span>
+								<span class="row-led led-1 led-4"></span>
+								<span class="row-led led-4"></span>
+								<span class="row-led led-0 led-2 led-3 led-6 led-7 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-3">
+								<span class="row-led led-0 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-4 led-5"></span>
+								<span class="row-led led-1 led-5"></span>
+								<span class="row-led led-3 led-4 led-5 led-7"></span>
+								<span class="row-led led-0 led-2 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-4">
+								<span class="row-led led-0 led-4 led-6"></span>
+								<span class="row-led led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-3 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-2 led-3 led-4 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-5 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-5">
+								<span class="row-led led-0 led-4 led-6 led-8"></span>
+								<span class="row-led led-4 led-7"></span>
+								<span class="row-led led-1 led-2 led-4"></span>
+								<span class="row-led led-0 led-4"></span>
+								<span class="row-led led-0 led-3 led-4 led-5 led-6 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-6">
+								<span class="row-led led-0 led-3 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-2 led-7"></span>
+								<span class="row-led led-1"></span>
+								<span class="row-led led-4"></span>
+								<span class="row-led led-0 led-3 led-5 led-6 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-7">
+								<span class="row-led led-2"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-4 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-2"></span>
+							</li>
+							<!-- /Number row -->
+						</ul>
+					</div>
+					<!-- /Number -->
+				</div>
+				<!-- /Seconds -->
+	
+				<!-- Dividers -->
+				<div class="divider divider-tenth mx-2 align-items-center d-none">
+					<ul class="list-unstyled m-0">
+						<!-- Divider dot -->
+						<li class="divider-dot"></li>
+						<!-- /Divider dot -->
+	
+						<!-- Divider dot -->
+						<li class="divider-dot"></li>
+						<!-- /Divider dot -->
+					</ul>
+				</div>
+				<!-- /Dividers -->
+	
+				<!-- Tenth -->
+				<div class="tenth d-none">
+					<!-- Number -->
+					<div class="number">
+						<ul class="list-unstyled m-0">
+							<!-- Number row -->
+							<li class="digit-row digit-row-1">
+								<span class="row-led led-3 led-5 led-7"></span>
+								<span class="row-led led-0 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-2 led-3 led-4 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-3 led-5 led-7"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-2">
+								<span class="row-led led-0 led-2 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-1"></span>
+								<span class="row-led led-1 led-4"></span>
+								<span class="row-led led-4"></span>
+								<span class="row-led led-0 led-2 led-3 led-6 led-7 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-3">
+								<span class="row-led led-0 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-4 led-5"></span>
+								<span class="row-led led-1 led-5"></span>
+								<span class="row-led led-3 led-4 led-5 led-7"></span>
+								<span class="row-led led-0 led-2 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-4">
+								<span class="row-led led-0 led-4 led-6"></span>
+								<span class="row-led led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-3 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-2 led-3 led-4 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-5 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-5">
+								<span class="row-led led-0 led-4 led-6 led-8"></span>
+								<span class="row-led led-4 led-7"></span>
+								<span class="row-led led-1 led-2 led-4"></span>
+								<span class="row-led led-0 led-4"></span>
+								<span class="row-led led-0 led-3 led-4 led-5 led-6 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-6">
+								<span class="row-led led-0 led-3 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-2 led-7"></span>
+								<span class="row-led led-1"></span>
+								<span class="row-led led-4"></span>
+								<span class="row-led led-0 led-3 led-5 led-6 led-8 led-9"></span>
+							</li>
+							<!-- /Number row -->
+	
+							<!-- Number row -->
+							<li class="digit-row digit-row-7">
+								<span class="row-led led-2"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-7 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-0 led-1 led-2 led-3 led-4 led-5 led-6 led-8 led-9"></span>
+								<span class="row-led led-2"></span>
+							</li>
+							<!-- /Number row -->
+						</ul>
+					</div>
+					<!-- /Number -->
+				</div>
+				<!-- /Tenth -->
+			</div>
+		</div>
+
+		<!-- APP JS -->
+		<script src="js/jquery-3.3.1.js"></script>
+		<script src="js/popper.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+
+</html>

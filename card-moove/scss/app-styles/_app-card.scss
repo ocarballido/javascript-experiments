@@ -1,0 +1,135 @@
+// BKOOL BREADCRUMB
+.card {
+	//overflow: hidden;
+}
+
+.card-session, .card-event {
+	overflow: hidden;
+	&:before {
+		//bottom: 0;
+		background: -moz-linear-gradient(top, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0.85) 100%);
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0.25) 40%,rgba(0,0,0,0.85) 100%);
+		background: linear-gradient(to bottom, rgba(0,0,0,0.25) 40%,rgba(0,0,0,0.85) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a202020', endColorstr='#b3202020',GradientType=0 );
+		content: "";
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+	.card-img-overlay {
+		z-index: 1;
+		.card-title {
+			font-size: 1.25rem;
+		}
+	}
+	.session-info {}
+	.session-details {
+		.session-graph {
+			//background-color: rgba(0, 0, 0, .45);
+			//height: 60px;
+		}
+	}
+	.card-title {
+		font-family: "HKGothic-SemiBold";
+	}
+}
+
+.card-event {
+	overflow: hidden;
+	&:before {
+		//bottom: 0;
+		background: -moz-linear-gradient(top, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.7) 100%);
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0.4) 40%,rgba(0,0,0,0.7) 100%);
+		background: linear-gradient(to bottom, rgba(0,0,0,0.4) 40%,rgba(0,0,0,0.7) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a202020', endColorstr='#b3202020',GradientType=0 );
+		content: "";
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+}
+
+@media (max-width: 576px) {
+	.session-info {
+		h3 {
+			font-size: 1.2rem;
+		}
+		h5 {
+			font-size: 1rem;
+		}
+		.card-text {
+			display: -webkit-box;
+			max-height: 72px;
+			overflow: hidden;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+		}
+	}
+}
+/*
+.card-instructor {
+	.session-info {
+		h3 {
+			font-size: 1.2rem;
+		}
+		h5 {
+			font-size: 1rem;
+		}
+	}
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+	
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	.card-instructor {
+		.session-info {
+			h3 {
+				font-size: inherit;
+			}
+			h5 {
+				font-size: inherit;
+			}
+		}
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.card-instructor {
+		.session-info {
+			h3 {
+				font-size: inherit;
+			}
+			h5 {
+				font-size: inherit;
+			}
+		}
+	}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+	.card-instructor {
+		.session-info {
+			h3 {
+				font-size: inherit;
+			}
+			h5 {
+				font-size: inherit;
+			}
+		}
+	}
+}
+*/
