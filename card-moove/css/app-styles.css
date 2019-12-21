@@ -9472,3 +9472,14 @@ body {
 
 main {
   overflow-x: hidden; }
+
+.share-container {
+  background-color: #202020;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  left: 0;
+  padding: 10px 10px 6px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 5; }
