@@ -9222,120 +9222,13 @@ button:focus {
   .btn-block-xl {
     width: 100%; } }
 
-.card-session, .card-event {
-  overflow: hidden; }
-  .card-session:before, .card-event:before {
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.25) 40%, rgba(0, 0, 0, 0.85) 100%);
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.25) 40%, rgba(0, 0, 0, 0.85) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(0, 0, 0, 0.25)), to(rgba(0, 0, 0, 0.85)));
-    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.25) 40%, rgba(0, 0, 0, 0.85) 100%);
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 40%, rgba(0, 0, 0, 0.85) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a202020', endColorstr='#b3202020',GradientType=0 );
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1; }
-  .card-session .card-img-overlay, .card-event .card-img-overlay {
-    z-index: 1; }
-    .card-session .card-img-overlay .card-title, .card-event .card-img-overlay .card-title {
-      font-size: 1.25rem; }
-  .card-session .card-title, .card-event .card-title {
-    font-family: "HKGothic-SemiBold"; }
+.card {
+  max-width: 300px;
+  /*transform: perspective(1500px) rotateY(60deg);
+	transform-origin: center center;*/
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.06), 0 0 6px rgba(0, 0, 0, 0.07), 0 0 12px rgba(0, 0, 0, 0.08), 0 0 24px rgba(0, 0, 0, 0.09);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.06), 0 0 6px rgba(0, 0, 0, 0.07), 0 0 12px rgba(0, 0, 0, 0.08), 0 0 24px rgba(0, 0, 0, 0.09); }
 
-.card-event {
-  overflow: hidden; }
-  .card-event:before {
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.7) 100%);
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.7) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.7)));
-    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.7) 100%);
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.7) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a202020', endColorstr='#b3202020',GradientType=0 );
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1; }
-
-@media (max-width: 576px) {
-  .session-info h3 {
-    font-size: 1.2rem; }
-  .session-info h5 {
-    font-size: 1rem; }
-  .session-info .card-text {
-    display: -webkit-box;
-    max-height: 72px;
-    overflow: hidden;
-    overflow: hidden;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical; } }
-
-/*
-.card-instructor {
-	.session-info {
-		h3 {
-			font-size: 1.2rem;
-		}
-		h5 {
-			font-size: 1rem;
-		}
-	}
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-	
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-	.card-instructor {
-		.session-info {
-			h3 {
-				font-size: inherit;
-			}
-			h5 {
-				font-size: inherit;
-			}
-		}
-	}
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-	.card-instructor {
-		.session-info {
-			h3 {
-				font-size: inherit;
-			}
-			h5 {
-				font-size: inherit;
-			}
-		}
-	}
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-	.card-instructor {
-		.session-info {
-			h3 {
-				font-size: inherit;
-			}
-			h5 {
-				font-size: inherit;
-			}
-		}
-	}
-}
-*/
 /*@font-face {
   font-display: swap;
 	font-family: "HKGothic-Bold";
