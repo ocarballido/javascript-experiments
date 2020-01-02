@@ -8,7 +8,7 @@ $(document).ready(function(){
     $( document ).on( "mousemove", function( event ) {
         var mouseOnX = event.pageX;
         var mouseOnY = event.pageY;
-        $('.card').each(function() {
+        $('.element').each(function() {
             var cardWidth = $(this).outerWidth();
             var cardHeight = $(this).outerHeight();
             var offset = $(this).offset();
