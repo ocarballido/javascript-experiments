@@ -61,8 +61,12 @@ $(document).ready(function(){
             var optionclick = $(this).find('input').attr('id');
             switch(optionclick) {
                 case "hours":
+                    var isMinutesOn = $('.minutes').hasClass('d-none');
+                    console.log(isMinutesOn);
                     $('.hours').toggleClass('d-none');
-                    $('.divider-minutes').toggleClass('d-none d-flex');
+                    if(!isMinutesOn) {
+                        $('.divider-minutes').toggleClass('d-none d-flex');
+                    }
                     break;
                 case "minutes":
                     $('.minutes').toggleClass('d-none');
