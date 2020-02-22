@@ -6,8 +6,6 @@
 @import "../bootstrap/bootstrap";
 
 //OS
-@import "app-buttons";
-@import "app-card";
 @import "app-font";
 @import "app-type";
 
@@ -18,7 +16,6 @@ html {
 }
 body {
 	background-color: #0063ea;
-	//perspective: 1500px;
 }
 
 main {
@@ -34,31 +31,6 @@ main {
 	width: 100%;
 	z-index: 5;
 }
-
-/*.smart-list {
-	li {
-		&:first-child {
-			.list-content {
-				li {
-					&:first-child {
-						border-top-left-radius: 5px;
-						border-top-right-radius: 5px;
-					}
-				}
-			}
-		}
-		&:last-child {
-			.list-content {
-				li {
-					&:last-child {
-						border-bottom-left-radius: 5px;
-						border-bottom-right-radius: 5px;
-					}
-				}
-			}
-		}
-	}
-}*/
 .smart-list {
 	overflow-y: scroll;
 	.smart-list-section {
@@ -69,13 +41,10 @@ main {
 			position: relative;
 			.smart-list-indicator {
 				flex: 0 0 auto;
-				//margin-right: 5px;
 				max-width: 100%;
 				position: relative;
 				width: 40px;
 				.indicator {
-					//border-top: 1px solid #e8e8e8;
-					//border-radius: 50%;
 					font-size: 1.2rem;
 					font-weight: 400;
 					height: 40px;
