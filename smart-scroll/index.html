@@ -16,6 +16,7 @@
 		<!-- Roboto -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100, 300,400,500,700,900&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap" rel="stylesheet">
 
 		<!-- Material icons -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -35,182 +36,217 @@
 			<a class="github-button" href="https://github.com/ocarballido/javascript-experiments/tree/master/card-moove/fork" data-icon="octicon-repo-forked" aria-label="Fork javascript-experiments/card-moove on GitHub">Fork</a>
 		</div>
 		<div class="container pt-6">
-			<h1 class="text-white">Cards Mouse Mooves</h1>
-			<!-- Tab menu -->
-			<ul class="nav nav-pills mb-5" id="cardsTab" role="tablist">
-				<li class="nav-item">
-					<a class="nav-link btn-outline-white mr-1 active" id="oneCard-tab" data-toggle="tab" href="#oneCard" role="tab" aria-controls="oneCard" aria-selected="true">One</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link btn-outline-white mr-1" id="lotsCard-tab" data-toggle="tab" href="#lotsCard" role="tab" aria-controls="lotsCard" aria-selected="false">Lots</a>
-				</li>
-			</ul>
-			<!-- /Tab menu -->
+			<h1 class="text-white">Smart scroll</h1>
 
-			<!-- Tab content -->
-			<div class="tab-content" id="cardsTabContent">
-				<!-- One -->
-				<div class="tab-pane fade show active" id="oneCard" role="tabpanel" aria-labelledby="oneCard-tab">
-					<div class="row align-items-center justify-content-center">
-						<!-- Card -->
-						<div class="col-sm-4 col-md-3 mb-4">
-							<div class="card element">
-								<img src="images/card_img-smartwatch.jpg" class="card-img-top" alt="...">
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			<div class="row">
+				<div class="col-md">
+					<ul class="list-unstyled smart-list bg-white rounded" style="max-height: 390px;">
+						<!-- Section -->
+						<li class="smart-list-section">
+							<div class="smart-list-container">
+								<div class="smart-list-indicator">
+									<div class="indicator"><i class="material-icons">star</i></div>
 								</div>
-								<ul class="list-group list-group-flush">
-									<li class="list-group-item">Cras justo odio</li>
-									<li class="list-group-item">Dapibus ac facilisis in</li>
-									<li class="list-group-item">Vestibulum at eros</li>
-								</ul>
-							  </div>
-						</div>
-						<!-- /Card -->
-					</div>
-				</div>
-				<!-- /One -->
+								<div class="smart-list-content">
+									<ul class="list-content">
+										<li class="smart-list-item">Anita</li>
+										<li class="smart-list-item">Antonio</li>
+										<li class="smart-list-item">Chris</li>
+										<li class="smart-list-item">Daniel Cruz</li>
+										<li class="smart-list-item">Diana Rosa</li>
+										<li class="smart-list-item">Galia</li>
+										<li class="smart-list-item">Kurro</li>
+										<li class="smart-list-item">Liudmila</li>
+										<li class="smart-list-item">Maykel</li>
+										<li class="smart-list-item">Orelvis</li>
+										<li class="smart-list-item">Victor</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!-- /Section -->
 
-				<!-- Lots -->
-				<div class="tab-pane fade" id="lotsCard" role="tabpanel" aria-labelledby="lotsCard-tab">
-					<div class="row no-gutters">
-						<!-- Card -->
-						<div class="col-sm-4 col-md-3 mb-4 element">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<!-- Section -->
+						<li class="smart-list-section">
+							<div class="smart-list-container">
+								<div class="smart-list-indicator">
+									<div class="indicator">A</div>
 								</div>
-							  </div>
-						</div>
-						<!-- /Card -->
-		
-						<!-- Card -->
-						<div class="col-sm-4 col-md-3 mb-4 element">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<div class="smart-list-content">
+									<ul class="list-content">
+										<li class="smart-list-item">Abel</li>
+										<li class="smart-list-item">Adolfo</li>
+										<li class="smart-list-item">Alejandro</li>
+										<li class="smart-list-item">Alicia</li>
+										<li class="smart-list-item">Alina</li>
+									</ul>
 								</div>
-							  </div>
-						</div>
-						<!-- /Card -->
-		
-						<!-- Card -->
-						<div class="col-sm-4 col-md-3 mb-4 element">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							</div>
+						</li>
+						<!-- /Section -->
+
+						<!-- Section -->
+						<li class="smart-list-section">
+							<div class="smart-list-container">
+								<div class="smart-list-indicator">
+									<div class="indicator">B</div>
 								</div>
-							  </div>
-						</div>
-						<!-- /Card -->
-		
-						<!-- Card -->
-						<div class="col-sm-4 col-md-3 mb-4 element">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<div class="smart-list-content">
+									<ul class="list-content">
+										<li class="smart-list-item">Betty</li>
+										<li class="smart-list-item">Bob</li>
+										<li class="smart-list-item">Brian</li>
+									</ul>
 								</div>
-							  </div>
-						</div>
-						<!-- /Card -->
-		
-						<!-- Card -->
-						<div class="col-sm-4 col-md-3 mb-4 element">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							</div>
+						</li>
+						<!-- /Section -->
+
+						<!-- Section -->
+						<li class="smart-list-section">
+							<div class="smart-list-container">
+								<div class="smart-list-indicator">
+									<div class="indicator">C</div>
 								</div>
-							  </div>
-						</div>
-						<!-- /Card -->
-		
-						<!-- Card -->
-						<div class="col-sm-4 col-md-3 mb-4 element">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<div class="smart-list-content">
+									<ul class="list-content">
+										<li class="smart-list-item">Carcaces</li>
+										<li class="smart-list-item">Carlos</li>
+										<li class="smart-list-item">Carmelo</li>
+										<li class="smart-list-item">Carolina</li>
+									</ul>
 								</div>
-							  </div>
-						</div>
-						<!-- /Card -->
-		
-						<!-- Card -->
-						<div class="col-sm-4 col-md-3 mb-4 element">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							</div>
+						</li>
+						<!-- /Section -->
+
+						<!-- Section -->
+						<li class="smart-list-section">
+							<div class="smart-list-container">
+								<div class="smart-list-indicator">
+									<div class="indicator">D</div>
 								</div>
-							  </div>
-						</div>
-						<!-- /Card -->
-		
-						<!-- Card -->
-						<div class="col-sm-4 col-md-3 mb-4 element">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<div class="smart-list-content">
+									<ul class="list-content">
+										<li class="smart-list-item">Dachel</li>
+										<li class="smart-list-item">Dalia</li>
+										<li class="smart-list-item">Damián</li>
+										<li class="smart-list-item">Dany</li>
+										<li class="smart-list-item">David</li>
+										<li class="smart-list-item">Diana</li>
+										<li class="smart-list-item">Diego</li>
+									</ul>
 								</div>
-							  </div>
-						</div>
-						<!-- /Card -->
-		
-						<!-- Card -->
-						<div class="col-sm-4 col-md-3 mb-4 element">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							</div>
+						</li>
+						<!-- /Section -->
+
+						<!-- Section -->
+						<li class="smart-list-section">
+							<div class="smart-list-container">
+								<div class="smart-list-indicator">
+									<div class="indicator">E</div>
 								</div>
-							  </div>
-						</div>
-						<!-- /Card -->
-		
-						<!-- Card -->
-						<div class="col-sm-4 col-md-3 mb-4 element">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<div class="smart-list-content">
+									<ul class="list-content">
+										<li class="smart-list-item">Eduardo</li>
+										<li class="smart-list-item">Eliseo</li>
+										<li class="smart-list-item">Eliza</li>
+										<li class="smart-list-item">Eloy</li>
+										<li class="smart-list-item">Elvira</li>
+									</ul>
 								</div>
-							  </div>
-						</div>
-						<!-- /Card -->
-		
-						<!-- Card -->
-						<div class="col-sm-4 col-md-3 mb-4 element">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								</div>
-							  </div>
-						</div>
-						<!-- /Card -->
-		
-						<!-- Card -->
-						<div class="col-sm-4 col-md-3 mb-4 element">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								</div>
-							  </div>
-						</div>
-						<!-- /Card -->
-					</div>
+							</div>
+						</li>
+						<!-- /Section -->
+					</ul>
 				</div>
-				<!-- /Lots -->
+				<div class="col-md">
+					<ul class="list-unstyled smart-list bg-white rounded" style="max-height: 390px;">
+						<!-- Section -->
+						<li class="smart-list-section">
+							<div class="smart-list-container">
+								<div class="smart-list-indicator">
+									<div class="indicator"><i class="material-icons">face</i></div>
+								</div>
+								<div class="smart-list-content">
+									<ul class="list-content">
+										<li class="smart-list-item">Anita</li>
+										<li class="smart-list-item">Antonio</li>
+										<li class="smart-list-item">Chris</li>
+										<li class="smart-list-item">Daniel Cruz</li>
+										<li class="smart-list-item">Diana Rosa</li>
+										<li class="smart-list-item">Galia</li>
+										<li class="smart-list-item">Kurro</li>
+										<li class="smart-list-item">Liudmila</li>
+										<li class="smart-list-item">Maykel</li>
+										<li class="smart-list-item">Orelvis</li>
+										<li class="smart-list-item">Victor</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!-- /Section -->
+
+						<!-- Section -->
+						<li class="smart-list-section">
+							<div class="smart-list-container">
+								<div class="smart-list-indicator">
+									<div class="indicator"><i class="material-icons">library_music</i></div>
+								</div>
+								<div class="smart-list-content">
+									<ul class="list-content">
+										<li class="smart-list-item">Los Van Van</li>
+										<li class="smart-list-item">Metallica</li>
+										<li class="smart-list-item">Nine Inch Nails</li>
+										<li class="smart-list-item">Paco de Lucía</li>
+										<li class="smart-list-item">Red Hot Chilli Pepper</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!-- /Section -->
+
+						<!-- Section -->
+						<li class="smart-list-section">
+							<div class="smart-list-container">
+								<div class="smart-list-indicator">
+									<div class="indicator"><i class="material-icons">place</i></div>
+								</div>
+								<div class="smart-list-content">
+									<ul class="list-content">
+										<li class="smart-list-item">Barcelona</li>
+										<li class="smart-list-item">La Habana</li>
+										<li class="smart-list-item">Madrid</li>
+										<li class="smart-list-item">Miami</li>
+										<li class="smart-list-item">Roma</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!-- /Section -->
+
+						<!-- Section -->
+						<li class="smart-list-section">
+							<div class="smart-list-container">
+								<div class="smart-list-indicator">
+									<div class="indicator"><i class="material-icons">fastfood</i></div>
+								</div>
+								<div class="smart-list-content">
+									<ul class="list-content">
+										<li class="smart-list-item">Doritos</li>
+										<li class="smart-list-item">Guacamola</li>
+										<li class="smart-list-item">Hamburguesa</li>
+										<li class="smart-list-item">Patatas</li>
+										<li class="smart-list-item">Pollo frito</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!-- /Section -->
+					</ul>
+				</div>
 			</div>
-			<!-- /Tab content -->
 		</div>
 
 		<!-- APP JS -->
