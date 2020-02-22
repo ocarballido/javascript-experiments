@@ -1,0 +1,122 @@
+// ------ VARS ------
+// Colors
+$white: 						#FFF !default;
+$black: 						#000 !default;
+$bkool-dark: 					#202020 !default;
+$gray-900: 						#363636 !default;
+$gray-800: 						#4d4d4d !default;
+$gray-700: 						#626262 !default;
+$gray-600: 						#797979 !default;
+$gray-500: 						#8f8f8f !default;
+$gray-400: 						#a6a6a6 !default;
+$gray-300: 						#bcbcbc !default;
+$gray-200: 						#d2d2d2 !default;
+$gray-100: 						#e8e8e8 !default;
+$gray-50: 						#f5f5f5 !default;
+
+$blue: 							#0063ea !default;
+$red: 							#ff0d52 !default;
+$orange: 						#F9A430 !default;
+$yellow: 						#fff700 !default;
+$green: 						#19AB65 !default;
+$cyan: 							#32AED2 !default;
+
+$indoor-experience: 			#F0455E !default;
+$outdoor-experience: 			#00EABF !default;
+$velodrome-experience: 			#8E66FF !default;
+
+$primary: 						$yellow !default;
+$secondary: 					$gray-200 !default;
+$success: 						$green !default;
+$info: 							$cyan !default;
+$warning: 						$orange !default;
+$danger: 						$red !default;
+
+$light: 						$gray-100 !default;
+$lighter: 						$gray-50 !default;
+$dark: 							$bkool-dark !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+	"primary":					$primary,
+	"secondary":				$secondary,
+	"success":					$success,
+	"info":						$info,
+	"warning":					$warning,
+	"danger":					$danger,
+	"light":					$light,
+	"lighter":					$lighter,
+	"dark":						$dark,
+	"white":					$white,
+	"blue":						$blue,
+	"black":					$black,
+	"indoor-experience":		$indoor-experience,
+	"outdoor-experience":		$outdoor-experience,
+	"velodrome-experience":		$velodrome-experience
+), $theme-colors);
+
+// Fonts
+$font-family-base: 				"Roboto Condensed";
+$font-size-base: 				1rem !default;
+$bkool-font-size-ratio: 		1.3;
+
+$h6-font-size: 					1rem;
+$h5-font-size: 					1.25rem;
+$h4-font-size: 					1.563rem;
+$h3-font-size: 					1.953rem;
+$h2-font-size: 					2.441rem;
+$h1-font-size: 					3.052rem;
+
+/*$h1-line-height: 				3.25rem;
+$h2-line-height: 				2.75rem;
+$h3-line-height: 				2.25rem;
+$h4-line-height: 				2rem;
+$h5-line-height: 				1.625rem;
+$h6-line-height: 				1.25rem !default;*/
+
+// Layout
+$container-max-widths: (
+	sm: 100%,
+	md: 100%,
+	lg: 960px,
+	xl: 1140px
+);
+
+$grid-gutter-width:				24px !default;
+
+// Spacing
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge((
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 2.25),
+  6: ($spacer * 3)
+), $spacers);
+
+// Body
+$body-bg: 						$gray-50 !default;
+$body-color:					$dark !default;
+
+// Progress bars
+$progress-height:               .25rem !default;
+$progress-bg:                   $gray-50 !default;
+$progress-border-radius:        .25rem !default;
+
+// Table
+$table-dark-bg:					$dark !default;
+$table-dark-border-color:		lighten($table-dark-bg, 10%) !default;
+
+// Padding
+$badge-padding-y:               .6em !default;
+$badge-padding-x:               1.2em !default;
+
+// Card
+$card-border-color:             transparent !default;
+
+// KBD
+$kbd-bg:                        rgba(0, 100, 235, .15) !default;
+$kbd-color:                     $primary !default;

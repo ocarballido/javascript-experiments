@@ -1,0 +1,25 @@
+// BKOOL BREADCRUMB
+.card {
+	//overflow: hidden;
+	max-width: 300px;
+	/*transform: perspective(1500px) rotateY(60deg);
+	transform-origin: center center;*/
+	box-shadow:
+		0 0 2px rgba(0, 0, 0, 0.06),
+		0 0 6px rgba(0, 0, 0, 0.07),
+		0 0 12px rgba(0, 0, 0, 0.08),
+		0 0 24px rgba(0, 0, 0, 0.09)
+	;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
