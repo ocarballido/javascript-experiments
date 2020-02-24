@@ -37,33 +37,6 @@ main {
 		position: relative;
 		.smart-list-container {
 			position: relative;
-			&.col-list {
-				display: flex;
-				flex-wrap: wrap;
-				.smart-list-indicator {
-					flex: 0 0 auto;
-					max-width: 100%;
-					width: 40px;
-					.indicator {
-						text-align: center;
-						width: 40px;
-					}
-				}
-			}
-			&.row-list {
-				display: block;
-				.smart-list-indicator {
-					background-color: white;
-					height: 40px;
-					width: 100%;
-					z-index: 5;
-					.indicator {
-						padding-left: 0.75rem;
-						text-align: left;
-						width: 100%;
-					}
-				}
-			}
 			.smart-list-indicator {
 				position: relative;
 				.indicator {
@@ -93,6 +66,41 @@ main {
 			}
 		}
 	}
+	&.col-list {
+		.smart-list-section {
+			.smart-list-container {
+				display: flex;
+				flex-wrap: wrap;
+				.smart-list-indicator {
+					flex: 0 0 auto;
+					max-width: 100%;
+					width: 40px;
+					.indicator {
+						text-align: center;
+						width: 40px;
+					}
+				}
+			}
+		}
+	}
+	&.row-list {
+		.smart-list-section {
+			.smart-list-container {
+				display: block;
+				.smart-list-indicator {
+					background-color: white;
+					height: 40px;
+					width: 100%;
+					z-index: 5;
+					.indicator {
+						padding-left: 0.75rem;
+						text-align: left;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -106,5 +114,3 @@ main {
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {}
-
-
